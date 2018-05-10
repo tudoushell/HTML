@@ -10,18 +10,30 @@
             padding: 5px;
         }
 
-        #nav{
+        #nav  {
             background-color:#eee;
             color: white;
             height: 550px;
             width: 100px;
             float: left;
             padding: 5px;
+        
         }
-        /* delete underline*/
-        a:link{
-            text-decoration: none;
+
+        /* link color */
+        #nav a.links:link{
+            color: #1a0dab;
+            text-decoration:none;
         }
+
+        #nav a.links:visited{
+            color: #609;
+        }
+
+        #nav a.links:hover{
+            text-decoration:underline;
+        }
+
 
         #section{
             float: left;
@@ -46,8 +58,8 @@
 
         <!-- set navigation link-->
         <div id="nav">
-            <a href="https://www.google.com" target="_blank">Google</a><br>
-            <a href="https://cn.bing.com" target="_blank">bing</a><br>
+            <a href="https://www.google.com" class="links" target="_blank">Google</a><br>
+            <a href="https://cn.bing.com" class="links" target="_blank">bing</a><br>
         </div>
 
         <!-- set article-->
