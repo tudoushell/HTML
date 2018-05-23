@@ -1,5 +1,5 @@
 # tudoushell.github.io
-HTML exercise
+HTML/CSS exercise
 
 
 layout exerice:
