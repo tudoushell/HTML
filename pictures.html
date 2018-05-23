@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           
+            #pics{
+                margin: 3px;
+                border: 1px solid gray;
+                height: auto;
+                width: auto;
+                float: left;
+                text-align: center;
+            }
+         
+           #pics img{
+               margin: 3px;
+               border: 2px solid gray;
+               
+           }
+           
+           #pics img:hover{
+               border: 2px solid black;
+           }
+
+           #pics img:hover+.desc{
+                border-top: 1px solid red;
+            }
+
+           #pics a:link{
+               text-decoration: none;
+           }
+
+           #pics .desc{
+               border-top: 1px solid rgb(104, 7, 7);
+               text-align: center;
+               font-weight: normal;
+               font-size: 12px;
+               padding: 10px 5px;
+           }
+         
+        </style>
+    </head>
+    <body>
+        <div id="pics">
+            <a href="http://www.w3school.com.cn/i/tulip_flaming_club.jpg" target="_blank">
+            <img src="http://www.w3school.com.cn/i/tulip_ballade_s.jpg"  alt="flowers" width="160"  height="160"/>
+            <div class="desc">在此进行描述</div>
+            </a>
+        </div>
+    </body>
+</html>
