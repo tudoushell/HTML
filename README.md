@@ -6,13 +6,13 @@ layout exerice:
 https://tudoushell.github.io/layout.html
 
 
-navigation exercise
+navigation exercise:
 https://tudoushell.github.io/navigation.html
 
-pictures exercise
+pictures exercise:
 https://tudoushell.github.io/pictures.html
 
-layoutone exericise
+layoutone exericise:
 https://tudoushell.github.io/layoutone.html
 
  
