@@ -1,10 +1,11 @@
 # tudoushell.github.io
 HTML/CSS exercise
 
+homepage exerics:
+https://tudoushell.github.io/homepage.html
 
 layout exerice:
 https://tudoushell.github.io/layout.html
-
 
 navigation exercise:
 https://tudoushell.github.io/navigation.html
