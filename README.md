@@ -2,7 +2,7 @@
 HTML/CSS exercise
 
 homepage exercise:
-tudoushell.github.io/homepage.html
+http://tudoushell.github.io/homepage.html
 
 layout exercise:
 https://tudoushell.github.io/layout.html
