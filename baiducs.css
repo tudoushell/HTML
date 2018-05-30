@@ -28,10 +28,11 @@
 }
 
 .product:link,.product:visited{
+    color: #fff;
     padding: 5px;
     text-decoration: none;
     background-color: #38f;
-    color: white;
+   
 }
 .morepr{  
     font-weight: normal;
