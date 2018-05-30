@@ -16,4 +16,7 @@ https://tudoushell.github.io/pictures.html
 layoutone exericise:
 https://tudoushell.github.io/layoutone.html
 
+baidu exericise:
+https://tudoushell.github.io/baidu.html
+
  
