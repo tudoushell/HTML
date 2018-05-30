@@ -27,7 +27,7 @@
     color: blue;
 }
 
-.product:link,.product:visited{
+.product:link, .product:visited{
     color: #fff;
     padding: 5px;
     text-decoration: none;
