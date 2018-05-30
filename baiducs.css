@@ -27,18 +27,11 @@
     color: blue;
 }
 
-.product:link{
+.product:link,.product:visited{
     color: #fff;
     padding: 5px;
     text-decoration: none;
     background-color: #38f
-}
-
-.product:visited{
-    color: #fff;
-    padding: 5px;
-    text-decoration: none;
-    background-color: #38f;
 }
 
 .morepr{  
