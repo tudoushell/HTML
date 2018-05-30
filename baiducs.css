@@ -1,0 +1,39 @@
+.nav{
+    width: 100%;
+    height: 30px;
+    clear: both;
+   
+}
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.nav li{
+    display: inline;
+    padding: 10px;
+}
+
+.nav a:link,a:visited{
+    font-size: 13px;
+    font-weight: bolder;
+    color: #333;
+   
+}
+
+.nav a:hover{
+    color: blue;
+}
+
+.product:link,.product:visited{
+    padding: 5px;
+    text-decoration: none;
+    background-color: #38f;
+    color: white;
+}
+.morepr{  
+    font-weight: normal;
+    
+}
