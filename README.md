@@ -1,7 +1,7 @@
 # tudoushell.github.io
 HTML/CSS exercise
 
-homepage exercise:
+homepage exercis:
 https://tudoushell.github.io/homepage.html
 
 layout exercise:
