@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>图片切换</title>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        #outer{
+            width: auto;
+            text-align: center;
+            padding: 2px;
+
+            margin: 1px auto;
+            
+            
+        }
+        img{
+            width: 700px;
+            height: auto;
+        }
+
+        .but{
+            display: block;
+        } 
+        </style>
+        <script>
+            window.onload = function(){
+                //获取按钮
+                var pre = document.getElementById("pre");
+                var next = document.getElementById("next");
+                //获取img标签事件
+                var img = document.getElementsByTagName("img")[0];
+                
+                //获取p标签
+                var indexof = document.getElementById("indexof");
+                var i = 0;
+                
+                //将图片文件放入数组中
+                var index = ["img/1.jpg",
+                            "img/2.jpg",
+                            "img/3.jpg",
+                            "img/4.jpg"
+                ];
+
+                  indexof.innerHTML = "总共"+(index.length+1)+"页,"+"当前第1页";
+    
+                //当点击pre按钮时，图片变成上一张
+                pre.onclick = function(){
+                    i--;
+                    if(i < 0)
+                        i = index.length-1;
+                    img.src = index[i];
+                    indexof.innerHTML = "总共"+(index.length+1)+"页,"+"当前第"+(i+1)+"页";
+                    
+                };
+                 //当点击next按钮时，图片变成下一张
+                next.onclick = function(){
+                    i++
+                    if(i > index.length-1)
+                        i = 0;
+                    img.src = index[i];
+                    indexof.innerHTML = "总共"+(index.length+1)+"页,"+"当前第"+(i+1)+"页";
+                };
+
+
+
+            };
+        </script>
+    </head>
+    <body>
+        <div id="outer">
+            <img src="img/1.jpg" alt="mm">
+            <div class="but">
+                <p id="indexof"></p>
+                <button id="pre">上一张</button>
+                <button id="next">下一张</button>
+            </div>  
+        </div>
+    </body>
+</html>
