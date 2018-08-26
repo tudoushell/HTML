@@ -44,9 +44,8 @@
                             "img/2.jpg",
                             "img/3.jpg",
                             "img/4.jpg"
-                ];
-
-                  indexof.innerHTML = "总共"+(index.length+1)+"页,"+"当前第1页";
+                            ];
+                  indexof.innerHTML = "总共"+index.length+"页,"+"当前第1页";
     
                 //当点击pre按钮时，图片变成上一张
                 pre.onclick = function(){
@@ -54,7 +53,7 @@
                     if(i < 0)
                         i = index.length-1;
                     img.src = index[i];
-                    indexof.innerHTML = "总共"+(index.length+1)+"页,"+"当前第"+(i+1)+"页";
+                    indexof.innerHTML = "总共"+index.length+"页,"+"当前第"+(i+1)+"页";
                     
                 };
                  //当点击next按钮时，图片变成下一张
@@ -63,7 +62,7 @@
                     if(i > index.length-1)
                         i = 0;
                     img.src = index[i];
-                    indexof.innerHTML = "总共"+(index.length+1)+"页,"+"当前第"+(i+1)+"页";
+                    indexof.innerHTML = "总共"+index.length+"页,"+"当前第"+(i+1)+"页";
                 };
 
 
