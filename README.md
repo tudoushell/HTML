@@ -19,4 +19,9 @@ https://tudoushell.github.io/layoutone.html
 baidu exercise:
 https://tudoushell.github.io/baidu.html
 
+Javascript exercise
+
+pictures exchange
+https://tudoushell.github.io/javascript exercise/1.html
+
  
