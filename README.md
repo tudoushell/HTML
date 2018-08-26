@@ -22,6 +22,6 @@ https://tudoushell.github.io/baidu.html
 Javascript exercise
 
 pictures exchange
-https://tudoushell.github.io/javascript exercise/1.html
+https://tudoushell.github.io/javascrip_exercise/1.html
 
  
