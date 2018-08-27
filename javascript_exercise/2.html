@@ -116,17 +116,17 @@
                 //程序功能是，当把爱好运动的所有项目点上后，全选按钮自动钩上，如有一个没有钩上
                 //则全选按钮没有钩上
                 var sport = document.getElementsByName("sport");
-                for(var i = 1;i < sport.length; i++){
+                for(var i = 1; i < sport.length; i++){
                     sport[i].onclick = function(){
                        for(var j = 1; j < sport.length; j++){
                             if(!sport[j].checked){
                                 sport[0].checked = false;
                                 break;
                             }
-                            if(j == sport.length){
-                                sport[0].checked = true;
-                            }
-                       }      
+                       }
+                       if(j == sport.length){
+                            sport[0].checked = true;
+                       }    
                     };      
                 }           
         };
