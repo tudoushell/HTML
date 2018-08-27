@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>全选练习</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            p{
+                display: inline;
+            }
+          
+        </style>
+        <script>
+        window.onload = function(){
+
+                //每个按钮的点击函数
+                function Onclick(idname,fun){
+                    var idname = document.getElementById(idname);
+                    idname.onclick = fun;
+                }
+             
+                
+                //全选按钮事件   可以用getElementsByName
+                Onclick("all_choose",function(){
+                    var allchoose = document.getElementsByTagName("input");
+                    for( var i = 0; i < allchoose.length; i++){
+                        allchoose[i].checked = true;
+                    }
+                       
+                    
+                });
+                
+                //不全选按钮事件
+                Onclick("not_choose",function(){
+                    var notchoose = document.getElementsByTagName("input");
+                    for(var i = 0;i < notchoose.length; i++){
+                        notchoose[i].checked = false;
+                    }
+                       
+
+                });
+
+                //反选按钮事件 点击按钮选中变成没有选中的，没有选中的变成选中的
+                //更简单的方法
+                Onclick("reserve_choose",function(){
+                    var reservechoose = document.getElementsByTagName("input");
+                    for(var i = 1; i < reservechoose.length; i++){
+                        reservechoose[i].checked = !reservechoose[i].checked;
+                    }
+                        
+                });
+
+                /*
+                //程序想复杂了
+                //反选按钮事件 点击按钮选中变成没有选中的，没有选中的变成选中的
+                Onclick("reserve_choose",function(){
+                    var flag = [];
+                    var j = 0;
+                    var reservechoose = document.getElementsByTagName("input");
+                    //先把打钩的记下标记
+                    for(var i = 0; i < reservechoose.length; i++){
+                        if( reservechoose[i].checked)
+                                 flag[j++] = i;
+                    }
+                    //根据标记在反选
+                        for(var i = 1 ; i < reservechoose.length; i++){
+                            reservechoose[i].checked = true;
+                            for( var m = 0; m < flag.length; m++){
+                                 if(flag[m] == i)
+                                    reservechoose[i].checked = false;
+                            } 
+                        }
+                });
+                */
+
+                //提交按钮事件
+                Onclick("submit",function(){
+                    var submit = document.getElementsByTagName("input");
+                    for(var i = 1; i < submit.length; i++){
+                        if(submit[i].checked){
+                            alert(submit[i].value);
+                        }
+                           
+                    }
+                        
+                });
+
+                //这个有BUG
+                //单选按钮事件 点击一下全选择，再点击一下不全选
+                //如果单击下面一个按钮（足球按钮。。。）,再点击全选就不会全选，足球这个按钮没有选中
+                // Onclick("choose",function(){
+                //     var choose = document.getElementsByName("sport");
+                //     for(var i = 1; i < choose.length; i++)
+                //         choose[i].checked = !choose[i].checked;  
+                // });
+                
+                 //单选按钮事件 点击一下全选择，再点击一下不全选
+                 Onclick("choose",function(){
+                    var choose = document.getElementsByName("sport");
+                    for(var i = 1; i < choose.length; i++){
+                        if(choose[0].checked){
+                            choose[i].checked = true;
+                        }
+                        else{
+                            choose[i].checked = false;
+                        }
+                            
+                    }
+                       
+                });
+                
+                //程序功能是，当把爱好运动的所有项目点上后，全选按钮自动钩上，如有一个没有钩上
+                //则全选按钮没有钩上
+                var sport = document.getElementsByName("sport");
+                for(var i = 1;i < sport.length; i++){
+                    sport[i].onclick = function(){
+                       for(var j = 1; j < sport.length; j++){
+                            if(!sport[j].checked){
+                                sport[0].checked = false;
+                                break;
+                            }
+                            if(j == sport.length){
+                                sport[0].checked = true;
+                            }
+                       }      
+                    };      
+                }           
+        };
+        
+        
+        </script>
+    </head>
+    <body>
+        <div id="outer">   
+            <p>你爱好的运动是？</p>
+            <input type="checkbox" id="choose" name="sport" value="choose">全选/全不选<br>
+            <input type="checkbox" id="football" name="sport" value="足球">足球
+            <input type="checkbox" name="sport" value="篮球">篮球
+            <input type="checkbox" name="sport" value="羽毛球">羽毛球
+            <input type="checkbox" name="sport" value="乒乓球">乒乓球<br>
+            <button id="all_choose">全选</button>
+            <button id="not_choose">全不选</button>
+            <button id="reserve_choose">反选</button>
+            <button id="submit">提交</button>
+        </div>
+    </body>
+</html>
