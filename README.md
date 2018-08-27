@@ -24,4 +24,7 @@ Javascript exercise
 pictures exchange
 https://tudoushell.github.io/javascript_exercise/1.html
 
+all_choose exercise
+https://tudoushell.github.io/javascript_exercise/2.html
+
  
