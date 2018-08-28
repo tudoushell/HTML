@@ -27,4 +27,6 @@ https://tudoushell.github.io/javascript_exercise/1.html
 all_choose exercise
 https://tudoushell.github.io/javascript_exercise/2.html
 
+add_delete_information
+https://tudoushell.github.io/javascript_exercise/3.html
  
