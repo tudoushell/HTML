@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>添加删除记录练习</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        #outer{
+
+            padding: 50px;
+            margin: 10px auto;
+            text-align: center;
+            
+        }
+      
+        table{
+            display: inline-table;
+        }
+
+        #tables  table,td{
+            
+            border-collapse: collapse;
+            border: 1px solid black;
+          
+        }
+
+        #tables thead,td{
+
+            width: 120px;
+            height: 20px;
+
+        }
+
+        #tables thead {
+
+            font-weight: bolder;
+        }
+        
+        #add{
+
+            padding: 30px;
+            margin: 10 auto;
+            
+        }
+
+        #addpeople{
+
+            display: inline-block;
+            padding: 10px;
+            width: 250px;
+            height: 150px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        p{
+            font-weight: bolder;
+            text-align: left;
+            padding: 10px;
+        } 
+
+        input{
+            display: inline;
+        }
+    </style>
+
+
+
+    <script>
+        window.onload = function(){
+            delete_table();
+            //程序的功能：删除表格一行
+            function delete_table(){
+                var deletes = document.getElementsByTagName("a");
+                for(var i = 0; i < deletes.length; i++)
+                        deletes[i].onclick = function(){
+                        var parent = this.parentNode.parentNode;
+                        var message = confirm("确定要删除"+parent.firstElementChild.innerHTML+"的信息吗？");
+                        if(message){
+                            parent.parentNode.removeChild(parent); 
+                        }
+                        };
+             }
+            
+            //提交新人员信息并加入表格
+            var submits = document.getElementById("submit");
+            submits.onclick = function(){
+                //获取输入框的信息
+               var name = document.getElementById("name").value,
+                   email = document.getElementById("email").value,
+                   salary = document.getElementById("salary").value;
+               // Name、email、salary正则表达式
+               //name的正则表达式
+               var reg_name = /^([A-Za-z])+[ .-●]*([A-Za-z])+$/;
+               //email的正则表达式
+               var reg_email = /^\w+([ .]*\w+)*@(([0-9A-Za-z]+)||([0-9A-Za-z]+)*).[A-Za-z]{1,3}$/;
+               //salary的正则表达式
+               var reg_salary = /^\d{1,5}$/;
+               var add_people = document.getElementsByTagName("a");
+               var parent = add_people[0].parentNode.parentNode.parentNode;
+               if(!reg_name.test(name))
+                    alert("您输入的姓名有误");
+               if(!reg_email.test(email))
+                    alert("您输入的email有误");
+               if(!reg_salary.test(salary))
+                    alert("您输入的salary有误");
+                //如果输入的内容符合规范，就写入表格
+               if(reg_name.test(name) && reg_email.test(email) && reg_salary.test(salary)){
+                        var tr = document.createElement("tr");
+                    tr.innerHTML = "<td>"+name+"</td>"+
+                                    "<td>"+email+"</td>"+
+                                    "<td>"+salary+"</td>"+
+                                    "<td><a href='#'>Delete</td>";
+                    parent.appendChild(tr);
+               }
+               
+
+               //这个必须用函数，不然的话，新添加的表触发不了删除事件，因为js是从上而下进行执行的
+               delete_table();
+            
+            };
+
+           
+            
+        };
+    </script>
+
+
+</head>
+<body>
+    <div id="outer">
+        <div id="tables">
+        <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>Salary</td>
+                        <td></td>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr>
+                    <td>Tom</td>
+                    <td>Tom@tom.com</td>
+                    <td>5000</td>
+                    <td><a href="#" >Delete</a></td>
+                </tr>
+                <tr>
+                    <td>Jerry</td>
+                    <td>Jerry@123.com</td>
+                    <td>10000</td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>bom</td>
+                    <td>bom@123.com</td>
+                    <td>2000</td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div id="add">
+            <div id="addpeople">
+                <p>添加新员工</p>
+                <label for="name">name:</label>
+                <input type="text" name="names" id="name">
+                <label for="email">email:</label>
+                <input type="text" name="emails" id="email">
+                <label for="salary">salary:</label>
+                <input type="text" name="salarys" id="salary">
+                <button id="submit">submit</button> 
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
