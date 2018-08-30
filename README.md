@@ -32,3 +32,6 @@ https://tudoushell.github.io/javascript_exercise/3.html
 
 user_agree_page exercise
 https://tudoushell.github.io/javascript_exercise/4.html
+
+div_moves_with_the_mouse exercise
+https://tudoushell.github.io/javascript_exercise/5.html
