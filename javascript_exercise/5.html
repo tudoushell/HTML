@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>div随鼠标而移动</title>
+    <style>
+        #red{
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-color: red;
+            position: relative;
+            
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var mouse = document.getElementsByTagName("html");
+            var red = document.getElementById("red");
+            mouse[0].onmousemove = function(event){
+                event = event||window.event;
+                var x = event.clientX;
+                var y = event.clientY;
+                red.style.left = x + "px";
+                red.style.top = y + "px";
+               
+            };
+
+        };
+    </script>
+</head>
+<body>
+    <div id="red">
+
+    </div>
+    
+</body>
+</html>
