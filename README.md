@@ -35,3 +35,6 @@ https://tudoushell.github.io/javascript_exercise/4.html
 
 div_moves_with_the_mouse exercise
 https://tudoushell.github.io/javascript_exercise/5.html
+
+mouse_drag
+https://tudoushell.github.io/javascript_exercise/6.html
