@@ -38,3 +38,6 @@ https://tudoushell.github.io/javascript_exercise/5.html
 
 mouse_drag
 https://tudoushell.github.io/javascript_exercise/6.html
+
+wheel
+https://tudoushell.github.io/javascript_exercise/7.html
