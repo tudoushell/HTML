@@ -1,0 +1,67 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>div随方向键移动</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: red;
+            top: 10px;
+        }
+    
+    </style>
+    <script>
+        //38 up 40 down 37 left 39 right
+        window.onload = function(){
+            var box1 = document.getElementById("box1");
+            var direction;
+            var speed = 20;
+            document.onkeydown = function(event){
+                event = event || window.event;
+                direction = event.keyCode;
+                
+            }
+                setInterval(function(){
+                    
+                    if(direction === 38){
+
+                        box1.style.top = box1.offsetTop - speed;    
+                    }
+                       
+                    else if(direction === 40){
+                        
+                        box1.style.top = box1.offsetTop + speed;
+                       
+                    }
+                        
+                    else if(direction === 39){
+                        
+                        box1.style.left = box1.offsetLeft + speed;
+                         
+                    }
+                        
+                    else if(direction === 37){
+                        
+                        box1.style.left = box1.offsetLeft - speed;
+                            
+                    }
+                
+                },30);
+
+                document.onkeyup = function(){
+                    direction = 0;
+                };
+        };
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+</body>
+</html>
