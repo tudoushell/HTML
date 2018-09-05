@@ -41,3 +41,6 @@ https://tudoushell.github.io/javascript_exercise/6.html
 
 wheel
 https://tudoushell.github.io/javascript_exercise/7.html
+
+div_moves_with_the_arrow_keys
+https://tudoushell.github.io/javascript_exercise/8.html
