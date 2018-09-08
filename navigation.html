@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>navigation exercise</title>
-        <style>
-        #nav {
-            position: absolute;
-            
-        }
-        #nav ul{
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        #nav li{
-            background-color: gray;
-            border-bottom: 1px solid red;
-            float: left;
-
-        }
-        #nav a:link,a:visited{
-            display: block;
-            color: white;
-            width: 120px;
-            text-align: center;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 4px;
-        }
-
-        #nav a:hover{
-            background-color: red;
-            
-        }
-        </style>
-    </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>navigation exercise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+   ul{
+     list-style: none;
+     
+   }
+   li{
+     float: left;
+   }
+   a:link,:visited{
+     display: block;
+     width: 120px;
+     text-align: center;
+     text-decoration: none;
+     color: white;
+     font-weight: bold;
+     background-color: gray;
+     padding: 5px;
+     border-bottom: 1px red solid;  
+   }
+   a:hover{
+     background: red;
+   }
     
-    <body>
-        <div id="nav">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">ARTICLES</a></li>
-                <li><a href="#">FORUM</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">ABOUT</a></li>
-            </ul>
-        </div>
-    </body>
-    
+  </style>
+</head>
+<body>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">NEWS</a></li>
+      <li><a href="#">ARTICLE</a></li>
+      <li><a href="#">FORUM</a></li>
+      <li><a href="#">CONTACT</a></li>
+      <li><a href="#">ABOUT</a></li>
+    </ul>
+</body>
 </html>
