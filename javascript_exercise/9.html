@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #box1{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: red;
+            left: 0;
+        }
+
+        #box2{
+            border-left: 1px solid black;
+            width: 0;
+            height: 1000px;
+            left: 800px;
+            top: 0px;
+            position: absolute;
+
+
+        }
+
+        #box3{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: yellow;
+            left: 0;
+        }
+    </style>
+    <script>
+    
+        window.onload = function(){
+            var box1 = document.getElementById("box1");
+            var box3 = document.getElementById("box3");
+            var btn = document.getElementById("btn");
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            
+            var timer;
+            btn.onclick = function(){
+               move(box1,10,800,"left");
+            };
+
+            btn1.onclick = function(){
+               move(box1,10,0,"left");
+            };
+
+            btn2.onclick = function(){
+                move(box3,10,800,"width",function(){
+                    move(box3,10,600,"top");
+                });
+            };
+
+            /*
+            obj 要移动的元素
+            speed 移动的速度
+            distance 移动的距离
+            way 移动的方式
+            callback 回调函数
+            */
+            function move(obj,speed,distance,way,callback){
+                clearInterval(obj.timer);
+                //这条语句必须放在外面，不然的话，当distance等于0时，speed变成-10或10
+                var current =parseInt(getStyle(obj,way));
+                    if(current >= distance)
+                        speed = -speed;
+                obj.timer = setInterval(function(){
+                     current = parseInt(getStyle(obj,way));
+                    var newstyle = current + speed;
+                    //这条语句是当newstyle超过移动的距离时，将newstyle等于distance，这样，就可以
+                    //结束定时器                                       
+                    if((speed < 0 && newstyle < distance) || (speed > 0 && newstyle > distance))
+                        newstyle = distance;
+                    
+                    obj.style[way] = newstyle + "px";
+                    if(newstyle == distance){
+                        clearInterval(obj.timer);
+                        callback && callback();
+                    } 
+
+                },30);
+
+                //获取当前的样式，同时兼容IE8
+                function getStyle(obj,style){
+                    if(window.getComputedStyle)
+                        return getComputedStyle(obj,null)[style];
+                    else
+                        return obj.currentStyle[style];
+                }
+            }
+
+
+           
+            
+           
+        };
+    </script>
+</head>
+<body>
+    <button id="btn">box1向右移</button>
+    <button id="btn1">box1向左移</button>
+    <button id="btn2">box2向右移</button>
+    <br><br>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    
+</body>
+</html>
