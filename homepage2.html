@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>css</title>
+  <style>
+    /* 页面初始化 */
+    body,ul,h1{
+      margin: 0;
+      padding: 0;
+    }
+   
+    body{
+      background-color: #FFCC33;
+    }
+
+    /***********设置标题栏***************/
+    #header{
+      width: 100%;
+      height: 60px;
+      background-color: #000;
+      overflow: hidden;
+    }
+    .title h1{
+      color: #fff;
+      padding: 8px 0;
+      float: left;
+    }
+    .nav_title{
+      list-style: none;
+      float: right;
+    }
+    .nav_title li{
+      float: left;
+    }
+    .nav a:link,:visited{
+      display: block;
+      text-decoration: none;
+      font-weight: bolder;
+      color: #fff;
+      margin: 10px;
+      padding: 10px 0;
+    }
+    .nav a:hover{
+      color: #ccc;
+    }
+    /***********主要内容****************/
+    
+    /* 设置内容的样式 */
+    #container{
+      width: 100%;
+      height: 100%;
+      background-color: #FFCC33;
+    }
+    /* 右侧内容 */
+    .right_box{
+      width: 25%;
+      background-color: #fff;
+      box-shadow: 3px 3px 3px #999;
+      padding: 20px;
+      margin: 0 20px;
+      float: right;
+    }
+    .right_box h2{
+      border-left: 3px gray solid;
+    }
+
+    .information{
+      list-style: none;
+    }
+    .grays{
+      color: #999;
+      text-align: right;
+      margin: 0 20px;
+    }
+    /* 设置span的宽度，这样可以使span全部对齐 */
+    .texts{
+      display: block;
+      width: 40%;
+      text-align: right;
+      float: left; 
+    }
+    .sumbutton{
+     text-align: center;
+    }
+    .summit{
+      background-color: #6495ED;
+      width: 50%;
+      height: 30px;
+      font-size: 16px;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      padding: 5px;
+      margin: 10px;
+
+    }
+    /* 左侧内容 */
+    .main_box{
+      width: 62%;
+      background-color: #fff;
+      margin:  20px;
+      padding: 20px;
+      box-shadow: 3px 3px 3px #999;
+      overflow: hidden;  
+    }
+    .article_write{
+      color: #ccc;
+    }
+    .article{
+      /* 首先缩进 */
+      text-indent: 1em;
+    }
+    .pic1{
+      width: 300px;
+      height: 150px;
+    }
+    /* 设置带有边框的图片 */
+    .pics{
+      list-style: none;
+      text-align: center;
+    }
+    .pics li{
+      width: 300px;
+      height: 200px;
+      margin: 20px 0;
+      border: 1px gray solid;
+
+    }
+    .pics img{
+      width: 300px;
+      height: 150px;
+    }
+    /* 设置表格样式 */
+    .test_table{
+      border-collapse: collapse;
+      width: 100%;
+      height: 100px;
+    }
+    .test_table thead,tbody,tr,td{
+     border: 1px #ccc solid;
+    }
+    .test_table thead{
+      background-color: #000;
+      color: #fff;
+      font-weight: bold;
+    }
+    /* 设置第四行表格的颜色  */
+    .test_table tr:nth-child(4){
+      background-color: gray;
+      color: #fff;
+      font-weight: bold;
+    }    
+
+    /************设置底部**************/
+    /* 设置底部样式 */
+    #footer{
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      line-height: 10px;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+  </style>
+</head>
+<body>
+ 
+    <!-- 标题 -->
+    <div id="header">
+        <!-- 网站标题 -->
+        <div class="title">
+          <h1>网站一级标题</h1>
+        </div>
+        <!-- 网站导航 -->
+        <div class="nav">
+          <ul class="nav_title">
+            <li><a href="#">导航链接1</a></li>
+            <li><a href="#">导航链接2</a></li>
+            <li><a href="#">导航链接3</a></li>
+            <li><a href="#">导航链接4</a></li>
+            <li><a href="#">导航链接5</a></li>
+          </ul>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div id="container">
+         <!-- 右侧内容 -->
+         <div class="right_box">
+            <h2>这是一个侧栏</h2>
+            <h3>注册窗口</h3>
+            <div class="register">
+              <ul class="information">
+                <li> 
+                  <span class="texts">请输入邮箱地址：</span>
+                  <input type="text"  placeholder="请输入邮箱地址"><br>
+                  <p class="grays">邮箱地址按格式输入</p>
+                </li>
+                <li>
+                   <span class="texts">请输入密码：</span>
+                   <input type="password" class="frame" placeholder="请输入密码">
+                </li>
+                <li>
+                   <span class="texts">请重复输入密码：</span>
+                   <input type="password"><br>
+                   <p class="grays">密码请输入正确</p>
+                </li>
+                <li> 
+                  <span class="texts">性别：</span>
+                  <label for="sex">
+                      <span class="sexs">男</span>
+                      <input type="radio" checked>
+                      <span class="sexs">女</span>
+                      <input type="radio">
+                  </label>
+                </li>
+                <li>
+                  <span class="texts">城市：</span>
+                  <select name="city" id="citys">
+                    <option value="上海" selected>上海</option>
+                    <option value="南京">南京</option>
+                    <option value="北京">北京</option>
+                  </select>
+                </li>
+                <li>
+                  <span class="texts">爱好：</span>
+                  <label for="hobby">
+                    <input type="checkbox" name="跑步" id="run">
+                    <span>跑步</span>
+                    <input type="checkbox" name="游泳" id="swim">
+                    <span>游泳</span>
+                  </label>
+                </li>
+                <li>
+                  <span class="texts">个人描述：</span>
+                  <textarea name="person" id="persons" rows="5"></textarea>
+                </li>
+              </ul>
+              <div class="sumbutton">
+                  <button class="summit">提交</button>
+              </div>
+            </div>
+          </div>
+         
+        <!-- 左侧内容 -->
+        <div class="main_box">
+           <h2>文章一级标签</h2>
+           <h3>文章二级标签</h3>
+         
+           <p class="article_write">文章作者&nbsp;&nbsp;文章发表时间</p>
+           <p class="article">"Our deepest fear is not that we are inadequate. 
+             Our deepest fear is that we are powerful beyond measure. 
+             It is our light, not our darkness that most frightens us. 
+             We ask ourselves, Who am I to be brilliant, gorgeous, talented, fabulous? 
+             Actually, who are you not to be? You are a child of God. 
+             Your playing small does not serve the world. 
+             There is nothing enlightened about shrinking so that other people won't feel insecure around you. 
+             We are all meant to shine, as children do. We were born to make manifest the glory of God that is within us. It's not just in some of us; it's in everyone. And as we let our own light shine, we unconsciously give other people permission to do the same. 
+             As we are liberated from our own fear, our presence automatically liberates others."
+            </p>
+           <p>我们最深的恐惧，并非是我们无能为力；<br>
+              我们最深的恐惧，是我们不可估量的能力；<br>
+              是我们内心的光明，而非黑暗，使我们惊恐不已。<br>
+              我们扪心自问<br>
+              我是可以聪明，美貌，才华横溢，出类拔萃吗？<br>
+              难道我们不可以成为这样的人吗？<br>
+              你是神的孩子。<br>
+              你萎缩自己，掩盖自己的光芒，并不会点亮这个世界 <br>
+              缩小自己在狭窄的世界里，为了消除周围的人感到不安，并无裨益。<br>
+              我们本应该光芒四射，象孩子们一样，照亮世界。<br>
+              我们生来就是为了呈现内在已有的神的荣耀。<br>
+              这种荣耀的光芒不只在一些人身上；它在每个人身上。<br>
+              当我们让自己发出光芒， <br>
+              我们不知不觉中也允许他人去闪耀他们的光芒。<br>
+              当我们将自己从恐惧中解放<br>
+              我们的存在无形中也解放了他人。</p>
+        </div>
+        <div class="main_box">
+          <h2>第二篇文章标题</h2>
+          <p class="article">
+              Good morning. Good morning.
+              In less than an hour, aircraft from here will join others from around the world, and you will be launching the largest aerial battle in the history of mankind.
+              Mankind, that word should have new meaning for all of us today.
+              We can't be consumed by our petty differences any more. We will be united in our common interest.
+              Perhaps it's fate that today is the 4th of July, and you will once again be fighting for our freedom.
+              Not from tyranny, oppression, or persecution, but from annihilation.
+              We're fighting for our right to live, to exist, and should we win the day, the 4th of July will no longer be known as an American holiday, but as the day when the world declared in one voice, 'We will not go quietly into the night! We will not vanish without a fight! 
+              We're going to live on, we're going to survive.' Today we celebrate our independence day!"
+          </p>
+          <p>
+              早上好！早上好！<br>
+              一小时之内，这里的战机将加入到世界上其他地方的战机，进行一场人类历史上最大规模的空战。<br>
+              人类，这个词将在今天被我们赋予全新的含义。<br>
+              我们不能在执着于我们之间微不足道的差异，我们将为我们共同的利益团结起来。<br>
+              也许是命运使然，今天是7月4日，你们将再次为自由而战。<br>
+              不是为了摆脱暴政，压迫，迫害，而是为了阻止毁灭。 <br>
+              我们为了生存而战，如果我们赢了，7月4日将不再是一个大家所知道美国节日，而是这样的一天，<br>
+              全世界用同一个声音宣布：<br>
+              我们不在坐以待毙！<br>
+              我们不在束手就擒！<br>
+              我们将继续生存！<br>
+              我们将继续生存！<br>
+              今天，我们庆祝独立日。<br>
+              </p>
+              <img class="pic1" src="http://www.1adh.com/2017/20170110/20160000-0001.JPG" alt="美景">
+              <h3>图片</h3>
+              <ul class="pics">
+                <li>
+                  <p>好看的图片</p>
+                  <img src="http://www.1adh.com/2017/20170110/20160000-0001.JPG" alt="美景">
+                </li>
+              
+                <li>
+                  <p>好看的图片</p>
+                  <img src="http://www.1adh.com/2017/20170110/20160000-0001.JPG" alt="美景">
+                </li>
+              </ul>
+        </div>
+        <div class="main_box">
+          <h2>到最后了</h2>
+          <p>我先建个有序列表</p>
+          <ol>
+            <li>测试</li>
+            <li>测试</li>
+            <li>测试</li>
+          </ol>
+          <p>再建一个表格</p>
+          <table class="test_table">
+            <!-- 表头 -->
+            <thead>
+              <tr>
+                <td>表头1</td>
+                <td>表头2</td>
+                <td>表头3</td>
+              </tr>
+            </thead>
+            <!-- 表身 -->
+            <tbody>
+              <tr>
+                <td>单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+              </tr>
+              <tr>
+                <td>单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+              </tr>
+              <tr>
+                <td>单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+              </tr>
+              <tr>
+                <td>单元格1</td>
+                <td>单元格2</td>
+                <td>单元格3</td>
+              </tr>
+            </tbody> 
+          </table>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+        版权所有&copy;KK
+    </div>
+
+   
+</body>
+</html>
