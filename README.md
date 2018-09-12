@@ -20,7 +20,7 @@ baidu exercise:
 https://tudoushell.github.io/baidu.html
 
 homepage2 exercise
-https://tudoushell.github.io/html_css.html
+https://tudoushell.github.io/homepage2.html
 
 JavaScript exercise
 
