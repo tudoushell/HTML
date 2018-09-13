@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+      /* 初始化样式 */
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      /* 设置外框架的样式 */
+      .outer{
+        width: 350px;
+        /* 设置居中 */
+        margin: 20px auto;
+      }
+      /* 设置标题部分 */
+      .header{
+        height: 50px;
+        background-color: #ccc;
+        /* 设置上边框 */
+        border-top: 2px #009A61 solid;
+      }
+      /* 设置标题内的h3 */
+      .header h3{
+        /* 使文字垂直居中 */
+        line-height: 50px;
+        /* 设置文字左边内边距 */
+        padding: 0 0 0 10px;
+        /* 设置文字浮动，使超链接向右浮动 */
+        float: left;
+      }
+      /* 设置标题内的超链接 */
+      .header a{
+        /* 使文字垂直居中 */
+        line-height: 50px;
+        color: red;
+        font-size: 14px;
+        float: right;
+        padding: 0 10px 0 0;
+      }
+
+      /* 设置内容部分 */
+      .content{
+        /* 设置外边框 */
+        border: 1px #ccc solid;
+        /* 设置内边距 */
+        padding: 10px;
+      }
+      .content h3{
+        font-size: 15px;
+        /* 设置上边距和下边距 */
+        margin: 10px 0 10px 0;
+      }
+      .content ul{
+        /* 去除点 */
+        list-style: none;
+        /* 设置下边框 */
+        border-bottom: 1px #ccc dashed;
+      }
+
+      .content li{
+        /* 设置下内边距 */
+        padding-bottom: 10px;
+      }
+
+      .content a{
+        /* 去除超链接的下划线 */
+        text-decoration: none;
+        font-size: 13px;
+        color: #000;
+      }
+      .content .redfont{
+        color: red;
+      }
+      .content .righta{
+        /* 设置预约报名向右浮动 */
+        float: right;
+      }
+      .content .noborder{
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 设置外框架 -->
+    <div class="outer">
+      <!-- 设置标题 -->
+      <div class="header">
+        <h3>近期开班</h3>
+        <a href="#">16年面授开启计划</a>
+      </div>
+      <!-- 设置内容 -->
+      <div class="content">
+        <h3>JavaEE+云计算-全程就业班</h3>
+        <ul>
+          <li><a href="#">开班时间：<span class="redfont">2016-04-27</span></a>
+              <a href="#" class="righta"><span class="redfont">预约报名</span></a>
+          </li>
+          <li>
+            <a href="#">开班时间：<span class="redfont">2016-04-07</span></a>
+            <a href="#"  class="righta"><span class="redfont">无座，名额爆满</span></a>
+          </li>
+          <li>
+            <a href="#">开班时间：2016-03-15</a>
+            <a href="#"  class="righta"><span>开班盛况</span></a>
+          </li>
+          <li>
+            <a href="#">开班时间：2016-02-25</a>
+            <a href="#"  class="righta"><span>开班盛况</span></a>
+          </li>
+          <li>
+            <a href="#">开班时间：2015-12-26</a>
+            <a href="#"  class="righta"><span>开班盛况</span></a>
+          </li>
+        </ul>
+        <h3>Android+人工智能-全程就业班</h3>
+        <ul>
+            <li><a href="#">开班时间：<span class="redfont">2016-04-10</span></a>
+                <a href="#" class="righta"><span class="redfont">预约报名</span></a>
+            </li>
+            <li>
+              <a href="#">开班时间：<span>2016-03-17</span></a>
+              <a href="#"  class="righta"><span>开班盛况</span></a>
+            </li>
+            <li>
+              <a href="#">开班时间：2016-02-20</a>
+              <a href="#"  class="righta"><span>开班盛况</span></a>
+            </li>
+            <li>
+              <a href="#">开班时间：2016-12-23</a>
+              <a href="#"  class="righta"><span>开班盛况</span></a>
+            </li>
+          </ul>
+          <h3>前端+HTML5-全程就业班</h3>
+          <ul class="noborder">
+              <li><a href="#">开班时间：<span class="redfont">2016-05-10</span></a>
+                  <a href="#" class="righta"><span class="redfont">预约报名</span></a>
+              </li>
+              <li>
+                <a href="#">开班时间：<span>2016-03-17</span></a>
+                <a href="#"  class="righta"><span>开班盛况</span></a>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </body>
+</html>
