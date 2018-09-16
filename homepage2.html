@@ -9,10 +9,7 @@
       margin: 0;
       padding: 0;
     }
-   
-    body{
-      background-color: #FFCC33;
-    }
+  
 
     /***********设置标题栏***************/
     #header{
@@ -47,10 +44,16 @@
     /***********主要内容****************/
     
     /* 设置内容的样式 */
-    #container{
+    .container{
       width: 100%;
       height: 100%;
       background-color: #FFCC33;
+    }
+    /* 用于消除子元素设置垂直外距时，会影响父元素 */
+    .clearfix::before{
+      content: "";
+      display: table;
+      clear: both;
     }
     /* 右侧内容 */
     .right_box{
@@ -58,7 +61,7 @@
       background-color: #fff;
       box-shadow: 3px 3px 3px #999;
       padding: 20px;
-      margin: 0 20px;
+      margin: 20px;
       float: right;
     }
     .right_box h2{
@@ -187,7 +190,7 @@
         </div>
     </div>
     <!-- 内容 -->
-    <div id="container">
+    <div class="container clearfix">
          <!-- 右侧内容 -->
          <div class="right_box">
             <h2>这是一个侧栏</h2>
