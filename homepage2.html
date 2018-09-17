@@ -196,58 +196,59 @@
             <h2>这是一个侧栏</h2>
             <h3>注册窗口</h3>
             <div class="register">
-              <ul class="information">
-                <li> 
-                  <span class="texts">请输入邮箱地址：</span>
-                  <input type="text"  placeholder="请输入邮箱地址"><br>
-                  <p class="grays">邮箱按格式输入</p>
-                </li>
-                <li>
-                   <span class="texts">请输入密码：</span>
-                   <input type="password" class="frame" placeholder="请输入密码">
-                </li>
-                <li>
-                   <span class="texts">请重复输入密码：</span>
-                   <input type="password"><br>
-                   <p class="grays">密码请输入正确</p>
-                </li>
-                <li> 
-                  <span class="texts">性别：</span>
-                  <label for="sex">
-                      <span class="sexs">男</span>
-                      <input type="radio" checked>
-                      <span class="sexs">女</span>
-                      <input type="radio">
-                  </label>
-                </li>
-                <li>
-                  <span class="texts">城市：</span>
-                  <select name="city" id="citys">
-                    <option value="上海" selected>上海</option>
-                    <option value="南京">南京</option>
-                    <option value="北京">北京</option>
-                  </select>
-                </li>
-                <li>
-                  <span class="texts">爱好：</span>
-                  <label for="hobby">
-                    <input type="checkbox" name="跑步" id="run">
-                    <span>跑步</span>
-                    <input type="checkbox" name="游泳" id="swim">
-                    <span>游泳</span>
-                  </label>
-                </li>
-                <li>
-                  <span class="texts">个人描述：</span>
-                  <textarea name="person" id="persons" rows="5"></textarea>
-                </li>
-              </ul>
-              <div class="sumbutton">
-                  <button class="summit">提交</button>
-              </div>
-            </div>
-          </div>
-         
+              <form action="#">
+                  <ul class="information">
+                    <li> 
+                      <span class="texts">请输入邮箱地址：</span>
+                      <input type="text" name="email"  placeholder="请输入邮箱地址"><br>
+                      <p class="grays">邮箱按格式输入</p>
+                    </li>
+                    <li>
+                      <span class="texts">请输入密码：</span>
+                      <input type="password" name="password" class="frame" placeholder="请输入密码">
+                    </li>
+                    <li>
+                      <span class="texts">请重复输入密码：</span>
+                      <input type="apassword" name="password"><br>
+                      <p class="grays">密码请输入正确</p>
+                    </li>
+                    <li> 
+                      <span class="texts">性别：</span>
+                      <label for="sex">
+                          <span class="sexs">男</span>
+                          <input type="radio" name="sex" value="man" checked>
+                          <span class="sexs">女</span>
+                          <input type="radio" name="sex" value="female">
+                      </label>
+                    </li>
+                    <li>
+                      <span class="texts">城市：</span>
+                      <select name="city" id="citys" name="city">
+                        <option value="上海" selected value="sh">上海</option>
+                        <option value="南京" value="nj">南京</option>
+                        <option value="北京" value="bj">北京</option>
+                      </select>
+                    </li>
+                    <li>
+                      <span class="texts">爱好：</span>
+                      <label for="hobby">
+                        <span>跑步</span>
+                        <input type="checkbox" name="hobby" value="run" id="run">
+                        <span>游泳</span>                   
+                        <input type="checkbox" name="hobby" value="swim" id="swim">
+                      </label>
+                    </li>
+                    <li>
+                      <span class="texts">个人描述：</span>
+                      <textarea name="person" id="persons" rows="5"></textarea>
+                    </li>
+                  </ul>
+                  <div class="sumbutton">
+                      <button class="summit">提交</button>
+                  </div>
+               </form> 
+             </div>
+         </div>
         <!-- 左侧内容 -->
         <div class="main_box">
            <h2>文章一级标签</h2>
