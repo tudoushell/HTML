@@ -11,12 +11,19 @@
         background: url("img/head.png") repeat-x;
         width: 100%;
       }
+      /* 由于图片浮动导致高度崩塌 */
+      /* 用于清除高度崩塌 */
+      .clearfix::after{
+        content: '';
+        display: table;
+        clear: both;
+      }
       /* 设置头部 */
       .header{
-        width: 940px;
-        margin: 0 auto;
         padding-top: 37px;
         padding-bottom: 46px;
+        width: 940px;
+        margin: 0 auto;
         /* background-color: #bfa; */
       }
       /* 设置Logo样式 */
@@ -26,9 +33,8 @@
       }
       /* 设置导航链接样式 */
       .nav{
-        margin: 21px 0 0 0;
+        margin: 22px 0 0 0;
         float: right;
-        list-style: none;
       }
       /* 设置导航li */
       .nav li{
@@ -36,13 +42,13 @@
         border-left: 1px #d6d6d6 dotted;
         padding: 0 10px 8px 10px;
       }
-
+      /* 设置导航栏中的超链接 */
       .nav a{
         text-decoration: none;
         font: bold 14px Georgia;
         color: #666;
       }
-
+      /* 设置导航栏中的字体 */
       .nav p{
         font: 11px Tahoma;
         color: #b7b7b7;
@@ -56,7 +62,7 @@
   </head>
   <body>
       <!-- 头部 -->
-      <div class="header">
+      <div class="header clearfix">
           <div class="logo">
             <a href="#"><img src="img/head/polo360.gif" alt="标签图片"></a>
           </div>
