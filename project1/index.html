@@ -13,7 +13,8 @@
       }
       /* 由于图片浮动导致高度崩塌 */
       /* 用于清除高度崩塌 */
-      .clearfix::after{
+      /* 确保父元素和子元素的垂直外边距不会重叠 */
+      .clearfix::after,.clearfix::before{
         content: '';
         display: table;
         clear: both;
@@ -58,19 +59,141 @@
         color: #b7b7b7;
       }
 
+      /* 设置内容 */
+      .content{
+        /* 必须设置宽度才能内容居中 */
+        width: 940px;
+        margin: 0 auto;
+      }
+      /* 设置轮播图的样式 */
+      .content .banner{
+        width: 940px;
+        height: 342px;
+        
+        /* 将多余的图片隐藏起来 */
+        overflow: hidden;
+        /* 设置相对定位 */
+        position: relative;
+      }
+      .content .banner ul{
+        /* 设置绝对定位，这样就可以使图片滚动 */
+        position: absolute;
+        left: 0;
 
+      }
+      /* 设置图片浮动 */
+      .content .banner li{
+        float: left;
+      }
+      
+      /* 设置轮播图的小按钮超链接 */
+      .content .banner .banner_link{
+        /* 相当于图片来设置位置 */
+        position: absolute;
+        top: 314px;
+        left: 15px;
+      }
+      /* 设置轮播图的样式 */
+      .content .banner .banner_link a{
+        /* 设置块样式，a标签是内联样式 */
+        display: block;
+        float: left;
+        margin-left: 5px;
+        width: 17px;
+        height: 17px;
+        background: url("img/content/point.png") no-repeat;
+      }
+      /* 设置第二个链接的默认样式 */
+      .content .banner .banner_link a:nth-child(2){
+        background: url("img/content/point_hover.png") no-repeat;
+      }
+      /* 设置鼠标放在链接上的样式 */
+      .content .banner .banner_link a:hover{
+        background: url("img/content/point_hover.png") no-repeat;
+      }
+      /* 设置轮播图下方的文字 */
+      .content .banner_word {
+        height: 64px;
+        padding-bottom: 4px;
+        margin-bottom: 39px;
+        background: url("img/content/lines.png") no-repeat bottom center;
+      }
+      /* 设置轮播图下方的文字 */
+      .content .banner_word h1{
+        text-align: center;
+        font: bold  24px Georgia;
+        margin: 21px 0 20px 0;
+      }
+
+      /* 设置文章样式 */
+      .content .article{
+        height: 435px;
+        background: url("img/content/lines.png") no-repeat bottom center;
+        margin-bottom: 43px;
+      }
+      /* 设置左、中间、右间文章宽度 浮动*/
+      .content .left_article,
+      .content .middle_article,
+      .content .right_article{
+        width: 300px;
+        float: left;
+      }
+      /* 设置中间文章边距 */
+      .content .middle_article{
+        margin: 0 20px;
+      }
+      /* 设置文章h2 */
+      .content h2{
+        font: 21px Georgia;
+        color: #11719e;
+      }
+      /* 设置文章小标题 */
+      .content .small_title{
+       font: 12px Helvetica;
+       color: #8c8c8c;
+      }
+      /* 设置左文章图片框架 */
+      .content .img1{
+        text-align: center;
+        width: 299px;
+        height: 190px;
+        margin: 14px 0 10px 0;
+        padding-top: 12px;
+        background: url("img/content/img-bg.png") no-repeat;
+      }
+      /* 设置文章文字样式 */
+      .content .p2{
+        font: 13px Helvetica;
+        color: #3e3e3e;
+        word-spacing: 2px;
+        padding-bottom: 21px;
+      }
+      .content .btn1{
+        display: block;
+        width: 163px;
+        height: 40px;
+        text-indent: 1em;
+        text-decoration: none;
+        /* 设置字体大小、行高 */
+        font: 12px/40px Helvetica;
+        color: #016999;
+        background: url("img/content/btn01.png") no-repeat;
+      }
+
+   
+      
 
      
       
     </style>
   </head>
   <body>
-      <!-- 头部 -->
+      <!-- 头部开始 -->
       <div class="header clearfix">
           <div class="logo">
             <a href="#"><img src="img/head/polo360.gif" alt="标签图片"></a>
           </div>
-         
+          <!-- 导航链接 -->
           <ul class="nav">
             <li>
               <a href="#">HOME</a>
@@ -94,9 +217,75 @@
             </li>
           </ul>
       </div>
-    
+      <!-- 头部结束 -->
       <!-- 内容 -->
-      <div class="content"></div>
+      <div class="content clearfix">
+          <!-- 设置轮播图 -->
+          <div class="banner"> 
+            <ul>
+              <li><img src="img/content/banner.png" alt="图片"></li>
+              <li><img src="img/content/banner1.png" alt="图片"></li>
+              <li><img src="img/content/banner.png" alt="图片"></li>
+              <li><img src="img/content/banner.png" alt="图片"></li>
+              <li><img src="img/content/banner.png" alt="图片"></li>
+            </ul>
+             <!-- 设置轮播图的超链接 -->
+             <div class="banner_link">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+          </div>
+          <!-- 设置轮播图下方的文字 -->
+          <div class="banner_word clearfix">
+            <h1>Lorem ipsum dolor sit amet,consectetur adipisicing elit</h1>
+          </div>
+          <!-- 设置文章 -->
+          <div class="article">
+            <!-- 设置左边的文章 -->
+            <div class="left_article">
+                <h2>Perfect Logic</h2>
+                <p class="small_title">All you want you website to do</p>
+                <div class="img1">
+                    <img src="img/content/left-pic.png" alt="左图片">
+                </div>
+                <p class="p2">
+                  Sed ut perspiciatis unde omnis iste natus error sit<br>
+                  voluptatem accusantium doloremque laudantium,<br>totam rem aperiam, eaque ipsa quae ab illo<br>inventore
+                  veritatis et quasi architecto beatae vitae<br>dicta sunt
+                </p>
+                <a  class="btn1" href="#">Learn More</a>
+            </div>
+              <!-- 设置中间的文章 -->
+            <div class="middle_article">
+                <h2>Complete Solution</h2>
+                <p class="small_title">A tool anything and everything you can think</p>
+                <div class="img1">
+                    <img src="img/content/middle-pic.png" alt="中间图片">
+                </div>
+                <p class="p2">
+                  Nemo enim ipsam voluptatem quia voluptas sit<br>
+                  aspernatur aut odit aut fugit, sed quia <br>consequuntur magni dolores eos qui ratione<br>voluptatem sequi nesciun tdolore magnam <br>aliquam quaerat voluptatem.
+                </p>
+                <a  class="btn1" href="#">Learn More</a>
+            </div>
+          <!-- 设置右边的文章 -->
+          <div class="right_article">
+              <h2>Uber Culture</h2>
+              <p class="small_title">Fresh. Modern and ready for future</p>
+              <div class="img1">
+                  <img src="img/content/right-pic.png" alt="右图片">
+              </div>
+              <p class="p2">
+                  Neque porro quisquam est, qui dolorem ipsum<br>
+                  quia dolor sit amet, consectetur, adipisci velit,<br>sed quia non numquam eius modi tempora<br>incidunt ut labore et dolore magnam aliquam <br>quaerat voluptatem.
+              </p>
+              <a  class="btn1" href="#">Learn More</a>
+            </div>             
+      </div>
+     
       <!-- 底部 -->
       <div class="footer"></div>
   </body>
