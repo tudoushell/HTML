@@ -180,8 +180,39 @@
         color: #016999;
         background: url("img/content/btn01.png") no-repeat;
       }
-
-   
+      /* 为内容sc设置样式 */
+      .content .sc{
+        width: 302px;
+      }
+      /* 设置SC中的h2 */
+      .content .sc h2{
+        font:  18px Regular;
+        color: #444444;
+        padding-bottom: 8px;
+        border-bottom: 1px #d3d3d3 dotted;
+      }
+      /* 设置sc中的p */
+      .content .sc .p1{
+        font: 12px Helvetica;
+        color: #444;
+        margin-top: 15px;
+      }
+      /* 设置icon样式 */
+      .content .sc .five_pic{
+       margin: 2px 0 20px 0;
+        
+      }
+       /* 设置icon样式中的超链接 */
+      .content .sc .five_pic a{
+        text-decoration: none;
+        padding-left: 2px;
+      }
+      .content .sc .News{
+        font: bold 18px "Gill Sans MT";
+        color: #444;
+        padding-bottom: 10px;
+        border-bottom: 1px #d3d3d3 dotted;
+      }
       
 
      
@@ -219,7 +250,7 @@
           </ul>
       </div>
       <!-- 头部结束 -->
-      <!-- 内容 -->
+      <!-- 内容开始 -->
       <div class="content clearfix">
           <!-- 设置轮播图 -->
           <div class="banner"> 
@@ -272,19 +303,45 @@
                 </p>
                 <a  class="btn1" href="#">Learn More</a>
             </div>
-          <!-- 设置右边的文章 -->
-          <div class="right_article">
-              <h2>Uber Culture</h2>
-              <p class="small_title">Fresh. Modern and ready for future</p>
-              <div class="img1">
-                  <img src="img/content/right-pic.png" alt="右图片">
-              </div>
-              <p class="p2">
-                  Neque porro quisquam est, qui dolorem ipsum<br>
-                  quia dolor sit amet, consectetur, adipisci velit,<br>sed quia non numquam eius modi tempora<br>incidunt ut labore et dolore magnam aliquam <br>quaerat voluptatem.
-              </p>
-              <a  class="btn1" href="#">Learn More</a>
-            </div>             
+            <!-- 设置右边的文章 -->
+            <div class="right_article">
+                <h2>Uber Culture</h2>
+                <p class="small_title">Fresh. Modern and ready for future</p>
+                <div class="img1">
+                    <img src="img/content/right-pic.png" alt="右图片">
+                </div>
+                <p class="p2">
+                    Neque porro quisquam est, qui dolorem ipsum<br>
+                    quia dolor sit amet, consectetur, adipisci velit,<br>sed quia non numquam eius modi tempora<br>incidunt ut labore et dolore magnam aliquam <br>quaerat voluptatem.
+                </p>
+                <a  class="btn1" href="#">Learn More</a>
+            </div>
+          </div>
+          <div class="sc">
+            <h2>Social Connection</h2>
+            <p class="p1">At vero eos et accusamus et iusto odio dignissimos<br> ducimus qui blanditiis praesentium</p>
+            <!-- 设置icon -->
+            <div class="five_pic">
+              <a href="#"> 
+                <img src="img/content/rss.png" alt="rss图片">
+              </a>
+              <a href="#">
+                  <img src="img/content/fb.png" alt="fb图片">
+              </a>
+              <a href="#">
+                  <img src="img/content/in.png" alt="in图片">
+              </a>
+              <a href="#">
+                  <img src="img/content/youtube.png" alt="youtube图片">
+              </a>
+              <a href="#">
+                  <img src="img/content/t.png" alt="t图片">
+              </a>
+            </div>
+            <h2 class="News">Newsletter</h2>
+            <p class="p1">At vero eos et accusamus et iusto odio dignissimos<br>ducimus qui blanditiis praesentium</p>
+          </div>
+          
       </div>
      
       <!-- 底部 -->
