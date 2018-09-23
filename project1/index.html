@@ -19,7 +19,7 @@
         display: table;
         clear: both;
       }
-      /* 设置头部 */
+      /***************** 设置头部 *************/
       .header{
         padding-top: 37px;
         padding-bottom: 46px;
@@ -58,8 +58,9 @@
         font: 11px Tahoma;
         color: #b7b7b7;
       }
+      /***************** 头部结束 **************/
 
-      /* 设置内容 */
+      /***************** 设置内容 **************/
       .content{
         /* 必须设置宽度才能内容居中 */
         width: 940px;
@@ -131,10 +132,13 @@
         background: url("img/content/lines.png") no-repeat bottom center;
         margin-bottom: 43px;
       }
-      /* 设置左、中间、右间文章宽度 浮动*/
+      /* 设置左、中间、右间、SC、Contact、Nupdate文章宽度 浮动*/
       .content .left_article,
       .content .middle_article,
-      .content .right_article{
+      .content .right_article,
+      .content .sc,
+      .content .contact,
+      .content .Nupdate{
         width: 300px;
         float: left;
       }
@@ -173,16 +177,13 @@
         display: block;
         width: 163px;
         height: 40px;
+        /* 设置首行缩进 */
         text-indent: 1em;
         text-decoration: none;
         /* 设置字体大小、行高 */
         font: 12px/40px Helvetica;
         color: #016999;
         background: url("img/content/btn01.png") no-repeat;
-      }
-      /* 为内容sc设置样式 */
-      .content .sc{
-        width: 302px;
       }
       /* 设置SC中的h2 */
       .content .sc h2{
@@ -207,16 +208,120 @@
         text-decoration: none;
         padding-left: 2px;
       }
+      /* 设置Newsletter标题样式 */
       .content .sc .News{
         font: bold 18px "Gill Sans MT";
         color: #444;
         padding-bottom: 10px;
         border-bottom: 1px #d3d3d3 dotted;
       }
-      
+      /* 设置输入框 */
+      .content .input_info{
+       width: 276px;
+       height: 33px;
+       line-height: 33px;
+       padding: 0 10px;
+       margin-top: 14px;
+       background: url("img/content/emailtxt.png") no-repeat;
+       border: none;
+      }
 
-     
+      /* 设置订阅按钮样式 */
+      .content .sub_button{
+        display: block;
+        text-decoration: none;
+        text-indent: 1em;
+        font: 13px/32px Regular;
+        color: #fff;
+        margin: 12px 0 22px 0;
+        width: 163px;
+        height: 32px;
+        background: url("img/content/btn02.png") no-repeat;
+      }
       
+      /* 设置contact两边外边距 */
+      .content .contact {
+        margin: 0 20px;
+      }
+      /* 设置contact中的h2 */
+      .content .contact h2{
+        font:  18px Regular;
+        color: #444444;
+        padding-bottom: 8px;
+        border-bottom: 1px #d3d3d3 dotted;
+      }
+      /* 设置contact中的文本区域 */
+      .content .contact #text{
+        width: 276px;
+        height: 114px;
+        padding: 10px;
+        margin-top: 16px; 
+        background: url("img/content/textarea.png") no-repeat;
+        border: none;
+        /* resize设置之后用户将不可以修改窗口大小 */
+        resize: none;
+      }
+      /* 设置nupdate中的h2 */
+      .content .Nupdate h2{
+        font:  18px Regular;
+        color: #444444;
+        padding-bottom: 8px;
+        border-bottom: 1px #d3d3d3 dotted;
+      }
+      /* 设置nudate中的文章和图标的轮廓 */
+      .content .Nupdate .art_icon{
+        padding: 15px 0 8px 0;
+        border-bottom: 1px #d3d3d3 dotted;
+      }
+      /* 设置nudate中的小图标 */
+      .content .Nupdate .picss{
+        float: left;
+        margin-right: 8px;
+      }
+      /* 设置nudate中的文章 */
+      .content .Nupdate .art_icon_p{
+        float: left;
+        font: 12px Helvetica;
+        color: #444;
+      }
+      /**************** 内容样式结束 **************/
+      /**************** 底部样式 *****************/
+      /* 设置底部轮廓 */
+     .footer{
+       width: 100%;
+       height: 174px;
+       background-color: #333;
+       border-top: 10px #4c4c4c solid;
+     }
+     /* 设置底部内容框架 */
+     .footer .ft_content{
+       width: 940px;
+       margin: 0 auto;
+       padding-top: 15px; 
+     }
+     /* 设置底部p */
+     .footer .ft_content p{
+       font: 11px Helvetica;
+       color: #999;
+       margin-bottom: 10px;
+       margin-left: 8px;
+     }
+     /* 设置底部版权内容样式 */
+     .footer .ft_content .copy{
+       float: right;
+     }
+     /* 设置底部超链接 */
+     .footer .ft_content a{
+       text-decoration: none;
+       font: 11px Helvetica;
+       color: #999;
+     }
+     /* 设置底部鼠标放在超链接上的样式 */
+     .footer .ft_content a:hover{
+        text-decoration: underline;
+        color: #fff;
+     }
+     /****************** 底部样式结束 **************/
     </style>
   </head>
   <body>
@@ -290,6 +395,7 @@
                 </p>
                 <a  class="btn1" href="#">Learn More</a>
             </div>
+              <!-- 左边文章结束 -->
               <!-- 设置中间的文章 -->
             <div class="middle_article">
                 <h2>Complete Solution</h2>
@@ -303,6 +409,7 @@
                 </p>
                 <a  class="btn1" href="#">Learn More</a>
             </div>
+            <!-- 中间文章结束 -->
             <!-- 设置右边的文章 -->
             <div class="right_article">
                 <h2>Uber Culture</h2>
@@ -317,6 +424,8 @@
                 <a  class="btn1" href="#">Learn More</a>
             </div>
           </div>
+          <!-- 右边的文章结束 -->
+          <!-- Social Connection部分 -->
           <div class="sc">
             <h2>Social Connection</h2>
             <p class="p1">At vero eos et accusamus et iusto odio dignissimos<br> ducimus qui blanditiis praesentium</p>
@@ -340,11 +449,66 @@
             </div>
             <h2 class="News">Newsletter</h2>
             <p class="p1">At vero eos et accusamus et iusto odio dignissimos<br>ducimus qui blanditiis praesentium</p>
+            <input type="text" class="input_info" name="email" placeholder="your email address">
+            <a href="#" class="sub_button">Subscribe</a>
           </div>
-          
+          <!-- Social Connection部分结束 -->
+          <!-- contact部分 -->
+          <div class="contact">
+            <h2>Contact</h2>
+            <input type="text" class="input_info" name="name" placeholder="your name">
+            <input type="text" class="input_info" name="email" placeholder="your email address">
+            <textarea name="text" id="text" placeholder="message"></textarea>
+            <a href="#" class="sub_button">Send it</a>
+          </div>
+          <!-- contact部分结束 -->
+          <!-- News Updates部分 -->
+          <div class="Nupdate">
+            <h2>News Updates</h2>
+            <div class="art_icon clearfix">
+              <img src="img/content/firefox.gif" class="picss" alt="火狐">
+              <p class="art_icon_p">
+                Lorem ipsum dolor sit amet, consectetur<br>
+                adipisicing elit, sed do eiusmod tempor<br>
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+              </div>
+            <div class="art_icon clearfix">
+              <img src="img/content/purple.gif" class="picss" alt="紫色图片">
+              <p class="art_icon_p">
+                Sed ut perspiciatis unde omnis iste natus<br>
+                error sit voluptatem accusantium <br>
+                doloremque laudantium, totam rem<br>
+                aperiam.
+              </p>
+              </div>
+           <div class="art_icon clearfix">
+              <img src="img/content/blue.gif" class="picss" alt="蓝色图片">
+              <p class="art_icon_p">
+                At vero eos et accusamus et iusto odio<br>
+                dignissimos ducimus qui blanditiis <br>
+                praesentium.
+              </p>
+             </div>
+            <a href="#" class="sub_button">Visit our Blog</a>
+           </div>
+           <!-- News Updates部分结束 -->
       </div>
+      <!-- 内容结束 -->
      
-      <!-- 底部 -->
-      <div class="footer"></div>
+      <!-- 底部开始 -->
+      <div class="footer">
+        <div class="ft_content">
+          <p class="copy">Copyright 2010. Studio VIVROCKS. All Rights Reserved.</p>
+          <p>Site Powered by Wordpress. Design and Developed by VIVROCKS.</p>
+          <p> 
+            <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Products</a> | <a href="#">Services</a> | <a href="#">Contact</a>
+          </p>
+          <p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of use</a>
+          </p>
+        </div>
+      </div>
+      <!-- 底部结束 -->
   </body>
 </html>
