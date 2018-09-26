@@ -1,0 +1,105 @@
+/* 初始化网页 */
+*{
+  margin: 0;
+  padding: 0;
+}
+/* 解决高度崩塌和确保父元素和子元素的垂直外边距不会重叠 */
+.clearfix::after,.clearfix::before{
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix{
+  zoom: 1;
+}
+/* 设置头部 */
+.header{
+  width: 892px;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  border-bottom: 2px #938E8C solid; 
+}
+/* 设置头部的时间p */
+.header p{
+  font-size: 10px;
+  color: #D45D5C;
+  float: right;
+  margin: 38px 0 9px 0;
+}
+/* 设置头部的h2 */
+.header h2{
+  display: inline-block;
+  padding: 42px 2px 0 5px;
+  font-weight: normal;
+  font-size: 14px;
+  color: white;
+  background-color: #D45D5C;
+}
+/* 设置内容样式 */
+.content{
+  width: 892px;
+  margin: 0 auto;  
+}
+/* 设置图片框架 */
+.content .cat1{
+  width: 640px;
+  height: 300px;
+  float: left;
+  margin-right: 50px;
+  position: relative;
+  background: #bfa;
+}
+
+/* 设置绿色方块样式 */
+.content .green{
+  width: 190px;
+  height: 300px;
+  opacity: 0.5;
+  /* 兼容IE */
+  filter: alpha(opacity=50);
+  background-color: #75B86B;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* 设置粉红方块样式 */
+.content .powed{
+  width: 190px;
+  height: 300px;
+  opacity: 0.5;
+  background-color: #D45D5C;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.about{
+  border-top: 1px #D45D5C solid;
+  width: 202px;
+  float: right;
+}
+
+.about h2{
+  font-weight: normal;
+  text-decoration: underline;
+  line-height: 40px;
+}
+
+.about p{
+  /* 设置字体为斜体 大小 行距 字体样式 */
+  font: italic 12px/12px "楷体";
+  color: #676767;
+}
+
+.about h1{
+  font: italic bold 110px "微软雅黑";
+  color: #75B86B;
+}
+
+.about h3{
+  display: inline-block;
+  font: 50px "微软雅黑";
+  color: #CC8091;
+}
+
