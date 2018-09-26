@@ -11,6 +11,10 @@
         display: table;
         clear: both;
       }
+      /* 兼容IE6 */
+      .clearfix{
+        zoom: 1;
+      }
       /***************** 设置头部 *************/
       .header{
         padding-top: 37px;
