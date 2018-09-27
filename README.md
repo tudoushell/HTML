@@ -23,7 +23,6 @@ homepage2 exercise
 https://tudoushell.github.io/homepage2.html
 
 project1
-
 https://tudoushell.github.io/project1/index.html
 
 Task1
