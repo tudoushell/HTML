@@ -41,12 +41,15 @@
   width: 892px;
   margin: 0 auto;  
 }
+/* 设置上半部分样式 */
+.content .catpic{
+  margin-bottom: 25px;
+}
 /* 设置图片框架 */
 .content .cat1{
   width: 640px;
   height: 300px;
   float: left;
-  margin-right: 50px;
   position: relative;
   background: #bfa;
 }
@@ -73,33 +76,123 @@
   top: 0;
   right: 0;
 }
-
-.about{
+/* 右边aboutTech样式 */
+.content .about{
   border-top: 1px #D45D5C solid;
   width: 202px;
   float: right;
 }
-
-.about h2{
+/* 右边aboutTech h2 */
+.content .about h2{
   font-weight: normal;
   text-decoration: underline;
   line-height: 40px;
 }
-
-.about p{
+/* 右边aboutTech p样式 */
+.content .about p{
   /* 设置字体为斜体 大小 行距 字体样式 */
   font: italic 12px/12px "楷体";
   color: #676767;
 }
-
-.about h1{
+/* 右边aboutTech h1样式 */
+.content .about h1{
   font: italic bold 110px "微软雅黑";
   color: #75B86B;
 }
-
-.about h3{
-  display: inline-block;
+/* 右边aboutTech h3样式 */
+.content .about h3{
   font: 50px "微软雅黑";
   color: #CC8091;
 }
-
+/* 中间文章框架 */
+.content .article{
+  width: 640px;
+  margin-bottom: 60px;
+}
+/* 设置左、右文章框架样式 */
+.article .left,.article .right{
+  width: 192px;
+  float: left;
+}
+/* 左边文章h4样式 */
+.article .left h4{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 16px;
+  color: #418c59;
+  
+}
+/* 文章p样式 */
+.article p{
+  font-size: 10px;
+}
+/* 中间文章样式 */
+.article .middle{
+  width: 192px;
+  margin: 0 15px;
+  float: left;
+}
+/* 中间文章 h4样式 */
+.article .middle h4{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 16px;
+  color: #d2994f;
+}
+/* 右边文章h4样式 */
+.article .right h4{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 16px;
+  color: #cc7680;
+}
+/* 含有%文章样式设置底部外边距 */
+.article .right .per{
+  margin-top: 30px;
+}
+/* 右边文章%内容样式 */
+.article .right .percents{
+  color: #cd4a48;
+}
+/* 设置下半部分文章样式 */
+.content .down_art{
+  width: 415px;
+}
+/* 设置下半部分THE大字样式 */
+.down_art .part_left span{
+  color: #F5E327;
+  font-size: 70px;
+  font-style: italic;
+}
+/* 设置下半部分h3样式 */
+.down_art .part_left h3{
+  color: #11456B;
+  font-size: 33px;
+  line-height: 40px;
+  margin-bottom: 16px;
+}
+/* 设置下部分许多猫的样式 */
+.part_left .morecat{
+  border-top: 2px #000 solid;
+}
+/* 设置下部分大猫的样式 */
+.part_left .morecat span{
+  color: #F5E327;
+  font-style: normal;
+  margin-right: 10px;
+  float: left;
+}
+/* 设置下部分p样式 */
+.part_left .morecat p{
+  font: 12px/16px "宋体";
+  color: #767777;
+}
+/* 设置下部分p首行缩进 */
+.part_left .morecat .indent{
+  text-indent: 2em;
+}
+/* 设置下部分图片样式 */
+.part_left .morecat img{
+  width: 160px;
+  float: right;
+}
