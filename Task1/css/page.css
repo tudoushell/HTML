@@ -156,7 +156,13 @@
 }
 /* 设置下半部分文章样式 */
 .content .down_art{
+  margin-bottom: 45px;
+}
+/* 设置下半部分左边文章样式 */
+.down_art .part_left{
+  float: left;
   width: 415px;
+  margin-right: 16px;
 }
 /* 设置下半部分THE大字样式 */
 .down_art .part_left span{
@@ -195,4 +201,77 @@
 .part_left .morecat img{
   width: 160px;
   float: right;
+}
+/* 设置右边文章样式 */
+.part_right .cat3{
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* 设置图片灰色阴影 */
+.cat3 .gray{
+  width: 458px;
+  height: 62px;
+  background-color: rgba(100,100,100,0.4);
+  position: absolute;
+  top: 213px;
+  left: 0;
+}
+/* 设置图片灰色阴影中的文字 */
+.cat3 .gray h2{
+  color: white;
+  font: normal 30px "微软雅黑";
+  margin: 10px 0 0 30px;
+  border-left: 3px #72B16A solid;
+}
+/* 设置图片灰色阴影中小字 */
+.cat3 .gray .smallfont{
+  font-size: 10px;
+  color: #72B16A;
+}
+/* 设置图片下半部样式 */
+.part_right .twopart{
+  width: 460px;
+  padding-top: 20px;
+  float: right;
+  background-color: #EEEEEE;
+}
+.twopart .titles{
+  margin-bottom: 40px;
+}
+.twopart p{
+  font: 14px/25px "宋体";
+  color: #767777;
+}
+.twopart .dashed{
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-width: 6px;
+  border-style: dashed dashed dashed dashed;
+  border-color: transparent transparent #767777 transparent;
+  margin: 0 10px 4px 20px;
+}
+
+.twopart .redframe .red{
+  width: 220px;
+  height: 120px;
+  background-color: #D45D5C;
+  padding: 20px 20px; 
+}
+
+.red .zero{
+  float: left;
+  font-size: 72px;
+  color: #ffff;
+  line-height: 120px;
+  border-right: 2px #fff solid;
+  margin-right: 10px;
+}
+
+.red .bigfont{
+  color: #fff;
+  font: italic 20px "微软雅黑";
+  
 }
