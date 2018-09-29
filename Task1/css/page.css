@@ -237,13 +237,16 @@
   float: right;
   background-color: #EEEEEE;
 }
+/* 设置3个标题框架样式 */
 .twopart .titles{
   margin-bottom: 40px;
 }
+/* 设置3个标题内容样式 */
 .twopart p{
   font: 14px/25px "宋体";
   color: #767777;
 }
+/* 设置3个三角样式 */
 .twopart .dashed{
   display: inline-block;
   width: 0px;
@@ -253,14 +256,15 @@
   border-color: transparent transparent #767777 transparent;
   margin: 0 10px 4px 20px;
 }
-
+/* 设置红色方框框架样式 */
 .twopart .redframe .red{
   width: 220px;
   height: 120px;
   background-color: #D45D5C;
   padding: 20px 20px; 
+  float: left;
 }
-
+/* 设置0样式 */
 .red .zero{
   float: left;
   font-size: 72px;
@@ -269,9 +273,54 @@
   border-right: 2px #fff solid;
   margin-right: 10px;
 }
-
+/* 设置one two three样式 */
 .red .bigfont{
   color: #fff;
-  font: italic 20px "微软雅黑";
+  font: italic 20px "微软雅黑"; 
+}
+/* 设置红色方框hello world样式 */
+.red p{
+  color: #fff;
+  font: 12px "楷体";
+}
+/* 设置右边hello文章框架 */
+.hello{
+  float: right;
+  width: 200px;
+  height: 160px;
   
+}
+/* 设置左边大引号样式 */
+.hello .quote{
+  font: 60px/30px "微软雅黑";
+  color: #D45D5C;
+  font-weight: bold;
+}
+/* 设置右边大引号样式 */
+.hello .quotes{
+  font: bold 60px/30px "微软雅黑";
+  color: #D45D5C;
+  margin: 15px 30px 0 0;
+  float: right;
+}
+/* 设置hello world文字样式 */
+.hello p{
+  font-size: 12px;
+  text-indent: 3em;
+  margin-left: 10px;
+}
+/* 设置底部样式 */
+.footer{
+  width: 892px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-top: 1px #938E8C solid;
+}
+/* 设置底部日期样式 */
+.footer p{
+  font-size: 10px;
+    color: #D45D5C;
+    float: right;
+    margin: 0 0 9px 0;
 }
