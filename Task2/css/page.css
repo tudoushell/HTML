@@ -1,0 +1,87 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* 用于清除高度崩塌 解决子元素在父元素中设置垂直外边距*/
+.clearfix:before,.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/******************* 头部开始 **********************/
+/* 设置头部框架样式 */
+.header{
+  width: 100%;
+  height: 64px;
+  /* background-color: #bfa; */
+}
+
+/* 设置新世界的小图标样式 */
+.header .world_icon{
+  text-decoration: none;
+  margin-left: 64px;
+  float: left;
+}
+/* 设置小图标图片样式 */
+.header img{
+  margin: 12px 10px 0 0;
+  float: left;
+}
+/* 设置小图标中文字样式 */
+.header .world_icon span{
+    color: black;
+    font: 20px/64px "微软雅黑";
+}
+
+/* 设置导航栏ul的样式 */
+.nav .navs{
+  list-style: none;
+  float: right;
+}
+
+/* 设置导航栏li的样式 */
+.nav .navs li{
+  float: left;
+  line-height: 64px;
+  padding: 0 15px;
+}
+/* 设置导航栏中字体的样式 */
+.nav .navs a{
+  text-decoration: none;
+  color: #A2A2A2;
+  font-size: 14px;
+}
+/* 设置导航栏中鼠标移到li上更改a的样式 */
+.nav .navs li:hover > a{
+  color: #E7504D;
+}
+/* 设置导航栏中鼠标移到li的样式 */
+.nav .navs li:hover{
+  border-bottom: 3px #E7504D solid;
+}
+/* 设置导航栏中第一个默认样式 */
+.nav .navs li:nth-of-type(1){
+  border-bottom: 3px #E7504D solid;
+}
+/* 设置导航栏中第一个默认样式 */
+.nav .navs li:nth-of-type(1)>a{
+  color: #E7504D;
+}
+/* 设置登录小图标的样式 */
+.nav .navs .small_login{
+  float: left;
+  padding-top: 10px;
+}
+/******************* 头部结束 **********************/
+
+/******************* 设置第一部分 ******************/
+/* 设置第一部分背景图片 */
+.section1{
+  background: url("../img/newlife.png");
+  background-size: cover;
+  width: 100%;
+  height: 691px;
+  clear: both;
+}
