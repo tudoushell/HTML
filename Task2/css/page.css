@@ -165,15 +165,68 @@
   height: 360px;
   background-color: #EEECED;
 }
-
+/* 设置第三部分图片样式 */
 .section3 img{
   display: block;
   margin: 90px auto 70px auto;
 }
-
+/* 设置第三部分文字样式 */
 .section3 p{
   text-align: center;
   color: #A0A0A0;
   font-size: 48px;
 }
 /******************* 设置第三部分结束 ******************/
+
+/******************* 设置第四部分开始 ******************/
+.section4{
+  position: relative;
+  background: url("../img/4part.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 343px;
+}
+
+.section4 .pinkb{
+  background: rgba(170,52,50,0.3);
+  width: 100%;
+  height: 343px;
+}
+
+.section4 .word_center{
+  text-align: center;
+  position: absolute;
+  top: 55px;
+  left: 433px;
+}
+
+.section4 .word_center .line{
+  margin: 10px auto;
+  width: 10%;
+  height: 2px;
+  background: white;
+}
+
+.section4 .word_center p{
+  color: white;
+  font-size: 20px;
+}
+
+.section4 .word_center .smallsize{
+  font-size: 16px;
+}
+
+.section4 .search_country{
+  position: absolute;
+  top: 171px;
+  left: 111px;
+}
+
+.section4 .search_country .city{
+  width: 240px;
+  height: 35px;
+  border: 1px #E64F4D solid;
+  margin-left: 35px;
+  color: #BBBBBB;
+}
+
