@@ -76,7 +76,7 @@
       .content .banner ul{
         /* 设置绝对定位，这样就可以使图片滚动 */
         position: absolute;
-        left: 0;
+        left: 0px;
         
       }
       /* 设置图片浮动 */
@@ -103,8 +103,8 @@
         height: 17px;
         background: url("../img/content/point.png") no-repeat;
       }
-      /* 设置第二个链接的默认样式 */
-      .content .banner .banner_link a:nth-child(2){
+      /* 设置第1个链接的默认样式 */
+      .content .banner .banner_link a:nth-child(1){
         background: url("../img/content/point_hover.png") no-repeat;
       }
       /* 设置鼠标放在链接上的样式 */
