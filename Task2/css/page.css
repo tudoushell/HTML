@@ -179,6 +179,7 @@
 /******************* 设置第三部分结束 ******************/
 
 /******************* 设置第四部分开始 ******************/
+/* 设置第四部分的框架 */
 .section4{
   position: relative;
   background: url("../img/4part.png") no-repeat;
@@ -186,47 +187,135 @@
   width: 100%;
   height: 343px;
 }
-
+/* 设置第四部分的背景 */
 .section4 .pinkb{
   background: rgba(170,52,50,0.3);
   width: 100%;
   height: 343px;
 }
-
+/* 设置第四部分文字居中 */
 .section4 .word_center{
   text-align: center;
   position: absolute;
   top: 55px;
   left: 433px;
 }
-
+/* 设置白色线条 */
 .section4 .word_center .line{
   margin: 10px auto;
   width: 10%;
   height: 2px;
   background: white;
 }
-
+/* 设置第四部分文字居中 */
 .section4 .word_center p{
   color: white;
   font-size: 20px;
 }
-
+/* 设置文字的大小 */
 .section4 .word_center .smallsize{
   font-size: 16px;
 }
-
+/* 设置选择框的位置 */
 .section4 .search_country{
   position: absolute;
   top: 171px;
   left: 111px;
 }
-
+/* 设置选择框的样式 */
 .section4 .search_country .city{
   width: 240px;
   height: 35px;
-  border: 1px #E64F4D solid;
+  border: 1px #BE4F48 solid;
   margin-left: 35px;
   color: #BBBBBB;
 }
+/* 设置按钮样式 */
+.section4 .search_country button{
+  width: 240px;
+  height: 35px;
+  background-color: #BE4F48;
+  border: none;
+  color: white;
+  font: 16px "微软雅黑";
+  margin-left: 35px;
+}
+/******************* 设置第四部分结束 ******************/
 
+/******************* 设置第五部分开始 ******************/
+/* 设置第五部分的框架 */
+.section5{
+  width: 100%;
+  margin: 100px 0;
+}
+/* 设置北京的框架 */
+.beijing{
+  margin-left: 150px;
+  width: 220px;
+  height: 340px;
+  text-align: center;
+  float: left;
+}
+/* 设置北京框架中的图片 */
+.section5 .beijing .pic1{
+  background: url("../img/gallery.png") -147px 0;
+  width: 220px;
+  height: 342px;
+}
+/* 设置灰色小字的样式 */
+.section5 .grayfont{
+  margin: 15px 0;
+  font-size: 12px;
+  color: #666;
+}
+/* 设置上海的框架 */
+.shanghai{
+  width: 220px;
+  height: 340px;
+  text-align: center;
+  margin: 0 35px;
+  float: left;
+}
+/* 设置上海框架中的图片 */
+.shanghai .pic2{
+  background: url("../img/gallery.png") -403px -53px;
+  width: 220px;
+  height: 342px;
+}
+
+/* 设置上海文字的大小和间隔 */
+.shanghai .fontspace{
+  font-size: 20px;
+  /* 设置字体的间隔 */
+  letter-spacing: 1em;
+  padding-left: 15px; 
+}
+/* 设置深圳的框架 */
+.shenzheng{
+  width: 220px;
+  height: 340px;
+  text-align: center;
+  margin-right: 40px;
+  float: left;
+}
+/* 设置深圳框架中的图片 */
+.shenzheng .pic3{
+  background: url("../img/gallery.png") -659px 0px;
+  width: 220px;
+  height: 342px;
+  
+}
+/* 设置香港的框架 */
+.xianggang{
+  width: 220px;
+  height: 340px;
+  text-align: center;
+  float: left;
+}
+/* 设置香港框架中的图片 */
+.xianggang .pic4{
+  background: url("../img/gallery.png") -916px 0px;
+  width: 220px;
+  height: 342px;
+}
+/******************* 设置第五部分结束 ******************/
