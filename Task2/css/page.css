@@ -14,7 +14,7 @@
 /* 设置头部框架样式 */
 .header{
   width: 100%;
-  height: 64px;
+  height: 68px;
   /* background-color: #bfa; */
 }
 
@@ -62,13 +62,13 @@
   border-bottom: 3px #E7504D solid;
 }
 /* 设置导航栏中第一个默认样式 */
-.nav .navs li:nth-of-type(1){
+/* .nav .navs li:nth-of-type(1){
   border-bottom: 3px #E7504D solid;
-}
-/* 设置导航栏中第一个默认样式 */
+} */
+/* 设置导航栏中第一个默认样式
 .nav .navs li:nth-of-type(1)>a{
   color: #E7504D;
-}
+} */
 /* 设置登录小图标的样式 */
 .nav .navs .small_login{
   float: left;
@@ -319,12 +319,14 @@
 /******************* 设置第五部分结束 ******************/
 
 /******************* 设置第六部分开始 ******************/
+/* 设置第六部分框架 */
 .section6{
   width: 100%;
+  margin-top: 150px;
 }
-
+/* 设置左边部分图片背景 */
 .section6 .time{
-  width: 65%;
+  width: 66%;
   height: 567px;
   background: url("../img/6part.png") no-repeat;
   background-size: cover;
@@ -332,7 +334,7 @@
   position: relative;
   float: left;
 }
-
+/* 设置小三角样式 */
 .time .icon{
   width: 28px;
   height: 31px;
@@ -341,52 +343,52 @@
   top: 50%;
   right: 0;
 }
-
+/* 设置左边图片中的字体样式 */
 .time .words{
   margin-top: 140px;
   position: relative;
 }
-
+/* 设置新世界字体样式 */
 .words .words1{
   color: #fff;
   font-size: 48px;
   font-weight: normal;
 }
-
+/* 设置time字体样式 */
 .words .words2{
   color: #fff;
   font: 150px Verdana, Geneva, sans-serif;
 }
-
+/* 设置图片剩下的字体样式 */
 .words .words3{
   color: #fff;
   font-size: 22px;
 }
-
+/* 设置右部分框架 */
 .section6 .rightcontent{
-  width: 25%;
+  width: 24%;
   height: 100%;
   text-align: center;
   padding: 60px;
   float: left;
 }
-
+/* 设置标题字体样式 */
 .rightcontent .title{
   font: 21px "微软雅黑";
   margin: 50px 0 20px 0;
-
 }
+/* 设置span样式 */
 .rightcontent span{
   color: #BE4F48;
 }
-
+/* 设置主要内容样式 */
 .rightcontent .content{
   color: #aaa;
   font-size: 14px;
   text-indent: 2em;
   line-height: 25px;
 }
-
+/* 设置按钮样式 */
 .rightcontent button{
   width: 126px;
   height: 43px;
@@ -395,11 +397,17 @@
   color: #BE4F48;
   margin-top: 55px;
 }
-
+/* 设置鼠标浮动到按钮的样式 */
+.rightcontent button:hover{
+  color: #fff;
+  background-color: #BE4F48;
+}
+/* 设置ul样式 */
 .rightcontent ul{
     list-style: none;    
-    text-align: center;
+    margin: 50px 0 0 135px;
 }
+/* 设置小圆球样式 */
 .rightcontent li{
   width: 10px;
   height: 10px;
@@ -407,5 +415,99 @@
   border: 1px solid #999;
   margin-right: 10px;
   float: left;
+}
+/* 设置第一个小圆球的背景 */
+.rightcontent a:nth-of-type(1) > li{
+  background-color: #999;
+}
+/******************* 设置第六部分结束 ******************/
 
+/******************* 设置第七部分开始 ******************/
+
+.section7{
+  width: 100%;
+}
+
+.section7 .left_part{
+  width: 33%;
+  height: 521px;
+  background-color: #E7504D;
+  text-align: center;
+  float: left;
+}
+
+.left_part .left_content{
+  margin-top: 200px;
+}
+
+.left_part .left_content p{
+  color: #fff;
+  font-size: 20px;
+}
+
+.left_part .left_content .lines{
+  margin: 25px auto;
+  width: 10%;
+  height: 2px;
+  background: #fff;
+}
+
+.left_part .left_content button{
+  width: 145px;
+  height: 47px;
+  color: #fff;
+  font-size: 20px;
+  border: 1px #fff solid; 
+  background-color:  #E7504D;
+}
+
+.section7 .middle_part{
+  width: 33%;
+  height: 521px;
+  background-color: #fff;
+  text-align: center;
+  float: left;
+}
+
+.middle_part .middle_content{
+  margin-top: 200px;
+}
+
+.middle_part .middle_content p{
+  font-size: 20px;
+}
+
+.middle_part .middle_content .lines{
+  margin: 25px auto;
+  width: 10%;
+  height: 2px;
+  background: #AAA;
+}
+
+.middle_part .middle_content button{
+  width: 145px;
+  height: 47px;
+  color: #E7504D;
+  font-size: 20px;
+  border: 1px #E7504D solid; 
+  background-color:  #fff;
+}
+
+.right_part{
+  width: 34%;
+  height: 521px;
+  background: url("../img/7section.png") no-repeat;
+  z-index: 1;
+  float: left;
+  position: relative;
+}
+
+.right_part .picsmall{
+  background: url("../img/7section-1.png") no-repeat;
+  z-index: 10;
+  width: 27px;
+  height: 31px;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
