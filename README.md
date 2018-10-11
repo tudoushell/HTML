@@ -28,6 +28,9 @@ https://tudoushell.github.io/project1/index.html
 Task1
 https://tudoushell.github.io/Task1/newspaper.html
 
+Task2
+https://tudoushell.github.io/Task2/index.html
+
 JavaScript exercise
 
 pictures exchange
