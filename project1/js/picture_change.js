@@ -10,16 +10,19 @@ ul[0].style.width = li.length * banner[0].clientWidth + "px";
 for(var i = 0; i < a.length; i++){
     a[i].num = i;
     bindEvent(a[i],"click",function(){
-      
       var start = ul[0].offsetLeft;
       var end = this.num * -940;
       move(ul[0],start,end,20,function(){});
-      
+      changea(this.num);
     });
-  
 }
 
-
+function changea(index){
+    for(var i = 0; i < a.length; i++){
+      a[i].style.background = "url('img/content/point.png') no-repeat";
+    }
+      a[index].style.background = " url('img/content/point_hover.png') no-repeat";
+}
 
 function  move(obj,start,end,speed,callback){
   var newplace;
@@ -34,7 +37,6 @@ function  move(obj,start,end,speed,callback){
       newplace = end;
     }
     obj.style.left = newplace + "px";
-    console.log(obj.style.left);
     if(newplace == end){
       clearInterval(timer);
     }
