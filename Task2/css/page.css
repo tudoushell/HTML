@@ -642,22 +642,23 @@
 /******************* 设置第九部分结束 ******************/
 
 /******************* 设置第十部分开始 ******************/
+/* 设置第10部分框架样式 */
 .section10{
   background-color: #32353E;
   width: 100%;
   height: 360px;
 }
-
+/* 设置字体居中 */
 .section10 .contacts{
   text-align: center;
 }
-
+/* 设置标题样式 */
 .contacts .title{
   padding-top: 95px;
   font: 22px "微软雅黑";
   color: #fff;
 }
-
+/* 设置文字样式 */
 .contacts .words{
   margin: 0 auto;
   width: 400px;
@@ -665,7 +666,7 @@
   color: #fff;
   padding: 10px 0;
 } 
-
+/* 设置输入框的样式 */
 .contacts input{
   width: 414px;
   height: 31px;
@@ -673,7 +674,7 @@
   padding-top: 2px;
   border: none;
 }
-
+/* 设置提交按钮的样式 */
 .contacts button{
   width: 80px;
   height: 33px;
@@ -681,34 +682,36 @@
   border: none;
   color: #fff;
 }
-
+/* 设置ul样式 */
 .contacts .chat_icon{
   list-style-type: none;
   width: 242px;
   margin: 30px auto 70px auto;
 }
+/* 设置li位置 */
 .contacts .chat_icon li{
   float: left;
   margin-right: 35px;
 }
+/* 设置第一个社区聊天图片 */
 .contacts .chat_icon .icon1{
   width: 28px;
   height: 24px;
   background: url("../img/sprit.png") no-repeat -135px -47px;
 }
+/* 设置第二个社区聊天图片 */
 .contacts .chat_icon .icon2{
   width: 28px;
   height: 25px;
-  background: url("../img/sprit.png") no-repeat -136px -72px;
+  background: url("../img/sprit.png") no-repeat -135px -72px;
 }
-
+/* 设置第三个社区聊天图片 */
 .contacts .chat_icon .icon3{
   width: 22px;
   height: 24px;
   background: url("../img/sprit.png") no-repeat -142px -97px;
 }
-
-
+/* 设置第四个社区聊天图片 */
 .contacts .chat_icon .icon4{
   width: 24px;
   height: 25px;
@@ -717,22 +720,20 @@
 /******************* 设置第十部分开始 ******************/
 
 /******************* 设置底部 ******************/
+/* 设置底部样式和字体样式 */
 .footer{
   background-color: #303039;
   width: 100%;
   height: 55px;
-}
-
-.footer{
   color: #fff;
   font-size: 15px;
   line-height: 55px;
 }
-
+/* 设置浮动 */
 .footer .right{
   float: right;
 }
-
+/* 设置超链接样式 */
 .footer a{
   text-decoration: none;
   color: #fff;
