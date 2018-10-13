@@ -86,7 +86,7 @@ function  move(obj,start,end,speed,callback){
         callback && callback();
         clearInterval(obj.timer);
       }
-  },30);
+  },40);
 }
 
 /**
