@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          min-width: 600px;
+        }
+        /* 用于设置伪等高 */
+        .left,.middle,.right{
+          padding-bottom: 10000px;
+          margin-bottom: -10000px;
+        }
+        .container{
+          padding: 0 200px;
+          overflow: hidden;
+          text-align: center;
+        }
+        .middle{
+          float: left;
+          width: 100%;
+          background-color: yellow;
+          
+        }
+        .left{
+          position: relative;
+          left: -200px;
+          float: left;
+          width: 200px;
+          background-color: #bfa;
+          margin-left: -100%;
+        }
+        .right{
+          position: relative;
+          right: -200px;
+          float: right;
+          width: 200px;
+          background-color: #bfa;
+          margin-left: -200px;
+        }
+
+        .clearfix::before,.clearfix::after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div class="middle">
+          middlesssss<br>
+          middlesssss<br>
+          middlesssss<br>
+          middlesssss<br>
+          middlesssss<br>
+          middlesssss<br>
+          middlesssss<br>
+      </div>
+      <div class="left">leftssssssssssss</div>
+      <div class="right">rightsssssssss</div>
+    </div>
+  </body>
+</html>
