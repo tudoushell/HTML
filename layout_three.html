@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        .container{
+          min-width: 600px;
+          text-align: center;
+          overflow: hidden;
+        }
+        .container .left,.container .right{
+          /* 伪等高 */
+          padding-bottom: 10000px;
+          margin-bottom: -10000px;
+          width: 200px;
+          background-color: #bfa;
+          float: left;
+        }
+        .container .middle{
+          width: 100%;
+          background-color: yellow;
+          float: left;
+        }
+        /* 双飞翼写法 */
+        .container .middle .inner{
+          padding: 0 200px;
+        }
+        .container .left{
+         margin-left: -100%;
+        }
+        .container .right{
+          margin-left: -200px;
+        }
+        .clearfix::after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div class="middle">
+        <div class="inner"> 
+          middle<br>
+          middle<br>
+          middle<br>
+          middle<br>
+          middle<br>
+          middle<br>
+          middle<br>
+          middle<br>
+          middle<br>
+          middle<br>
+        </div>
+      </div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>
