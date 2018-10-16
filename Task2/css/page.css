@@ -246,10 +246,10 @@
   width: 100%;
   margin: 100px 0;
 }
+
 /* 设置北京的框架 */
 .beijing{
-  margin-left: 150px;
-  width: 220px;
+  margin-left: 12%;
   height: 340px;
   text-align: center;
   float: left;
@@ -268,7 +268,6 @@
 }
 /* 设置上海的框架 */
 .shanghai{
-  width: 220px;
   height: 340px;
   text-align: center;
   margin: 0 35px;
@@ -290,7 +289,6 @@
 }
 /* 设置深圳的框架 */
 .shenzheng{
-  width: 220px;
   height: 340px;
   text-align: center;
   margin-right: 40px;
@@ -305,7 +303,6 @@
 }
 /* 设置香港的框架 */
 .xianggang{
-  width: 220px;
   height: 340px;
   text-align: center;
   float: left;
@@ -366,7 +363,7 @@
 }
 /* 设置右部分框架 */
 .section6 .rightcontent{
-  width: 21%;
+  width: 23%;
   height: 100%;
   text-align: center;
   padding: 60px 30px 60px 74px;
@@ -508,13 +505,13 @@
   width: 34%;
   height: 521px;
   background: url("../img/7section.png") no-repeat;
-  z-index: 1;
+  background-size: cover;
   float: left;
   position: relative;
 }
 /* 设置鼠标浮动右部分图片样式 */
 .right_part:hover .gray{
-  width: 99%;
+  width: 100%;
   height: 521px;
   background:rgba(3, 0, 0, .4);
 }
