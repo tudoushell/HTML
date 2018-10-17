@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>图片水平垂直居中</title>
+    <meta charset="UTF-8">
+    <style>
+      .wrap{
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+        border: 1px #000 solid;
+        text-align: center;
+      }
+      .wrap::after{
+        display: inline-block;
+        content: "";
+        height: 100%;
+        width: 0px;
+        /* background-color: #bfa; */
+        vertical-align: middle;
+      }
+      .wrap img{
+        width: 200px;
+        height: 200px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <img src="https://icrvb3jy.xinmedia.com/solomo/article/132098/511AF21B-FF97-9808-DEA6-83D4BF58BD60.jpeg" alt="views">
+    </div>
+  </body>
+</html>
