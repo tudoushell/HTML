@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    #outer{
+        width: 520px;
+        height: 300px;
+        background-color: yellowgreen;
+        padding: 10px 0;
+        margin: 50px auto;
+        /* 开启相对定位 */
+        position: relative;
+        /* 裁剪溢出内容 */
+        overflow: hidden;
+    }
+
+    #imgList{
+        list-style: none;
+        position: absolute;
+        /* width: 2050px; 通过JS去设置这样更灵活*/
+        left: 0px;
+        
+    }
+
+    #imgList li{
+        padding: 0 10px;
+        float: left;
+        
+       
+    }
+
+    #imgList img{
+       
+        width: 500px;
+        height: 300px;
+    }
+
+    #links{
+        
+        position: absolute;
+        bottom: 15px;
+        /* left: 220px; */
+       
+    }
+
+    #links a{
+        width: 10px;
+        height: 10px;
+        float: left;
+        background: red;
+        margin: 0 5px;
+        /* 设置透明     */
+        opacity: 0.5;  
+        /* 兼容IE透明 */
+        filter:alpha(opacity=50);
+    }
+    #links a:hover{
+        background-color: black;
+    }
+    </style>
+
+    <script>
+    window.onload = function(){
+        var outer = document.getElementById("outer");
+        var imgList = document.getElementById("imgList");
+        var imgs = document.getElementsByTagName("img");
+        var links = document.getElementById("links");
+        var a = document.getElementsByTagName("a");
+      
+        //设置imgList width宽度
+        imgList.style.width = 520*imgs.length + "px";
+        // 设置links宽度居中
+        links.style.left = (outer.offsetWidth-(a[0].offsetWidth+10)*a.length)/2 + "px";
+        //设置点击图片切换 
+        for(var i = 0 ;i < imgs.length; i++){
+            //用于获取鼠标点击哪张图的索引,并且红色表格变成黑色
+            if(i != imgs.length - 1){
+                a[i].num = i;
+                a[i].onclick = function(){
+                    //关闭定时器，因为，当你每点击一个链接就会产生定时器，而且默认autopic（）会运行的，
+                    //如果不关闭的话，点击第3个链接，有可能图片会从3跳到2,这是因为autopic的定时器没有关闭
+                    clearInterval(timer);
+                    var target = -outer.offsetWidth * this.num;
+                    //设置index，当你点击链接，会从当前的点击的图片开始自动切换
+                    index = this.num;
+                    //设置A(方框)的颜色
+                    setAcolor(index);
+                    //点击红色图片切换图片
+                    move(imgList,20,target,function(){
+                        autopic();
+                    });
+                }
+            }
+        }
+          //自动图片切换
+          autopic();
+       
+    };
+    //各种函数
+    var index = 0;
+    var timer;
+    var imgs = document.getElementsByTagName("img");
+    var a = document.getElementsByTagName("a");
+           
+    //设置A(方框)的颜色
+    function setAcolor(num){
+        var imgList = document.getElementById("imgList");
+            for(var i = 0; i < imgs.length; i++){
+                if(i != imgs.length - 1)
+                     a[i].style.backgroundColor = "";
+            }
+                if(num == imgs.length - 1){
+                   a[0].style.backgroundColor = "black";
+                   imgList.style.left = 0;
+                }
+
+                else
+                   a[num].style.backgroundColor = "black";
+        }  
+
+        //自动切换图片
+        function autopic(){
+                var imgs = document.getElementsByTagName("img");
+                timer = setInterval(function(){
+                    index++;
+                    index = index % imgs.length;
+                    move(imgList,20,-520*index,function(){
+                        setAcolor(index);
+                    });
+                },3000);
+            }
+
+        //图片移动 
+        //obj 移动的目标，speed移动的速度，distance要移动的距离 callback 回调函数
+        function move(obj,speed,distance,callback){
+            clearInterval(obj.timer); 
+            var current = imgList.offsetLeft;            
+            if(distance > current)
+                speed = -speed;
+            obj.timer = setInterval(function(){ 
+                current = parseInt(imgList.offsetLeft);
+                var newdistance = current-speed;
+                if(speed < 0 && distance < newdistance  || speed > 0 && distance > newdistance )
+                    newdistance = distance;
+                obj.style.left = newdistance + "px";
+                if(newdistance == distance){	
+                    clearInterval(obj.timer);
+                    callback && callback();
+                }
+            },30);
+        }
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <ul id="imgList">
+            <li><img src="img/1.jpg" alt="x"></li>
+            <li><img src="img/2.jpg" alt="x"></li>
+            <li><img src="img/3.jpg" alt="x"></li>
+            <li><img src="img/4.jpg" alt="x"></li>
+            <li><img src="img/1.jpg" alt="x"></li>
+            
+            
+        </ul>
+         <!-- 设置按钮超链接部分 -->
+        <div id="links">
+                <a href="javascript:;" style="background-color:black;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+        </div>
+    </div>
+   
+</body>
+</html>
