@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>网页换肤</title>
+    <meta charset="UTF-8">
+    <style>
+      body{
+        background-color: #FFDDDD;
+      }
+      .content{
+        width: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+     .content .nav{
+       margin: 8px 0;
+     }
+     .content .nav .red{
+       display: inline-block;
+       width: 8px;
+       height: 8px;
+       border: 3.5px solid #FF0000;
+       background-color: #ffffff;
+     }
+     .content .nav .green{
+       display: inline-block;
+       width: 14px;
+       height: 14px;
+       background-color: #008000;
+     }
+     .content .nav .black{
+       display: inline-block;
+       width: 14px;
+       height: 14px;
+       background-color: #000;
+     }
+     .content .title{
+       list-style: none;
+       float: left;
+       text-align: center;
+       margin: 0;
+       padding: 0;
+     }
+     .content .title li{
+       float: left;
+       padding: 2px 30px;
+       background: #FF0000;
+       margin-right: 2px;
+     }
+     .content .title a{
+       text-decoration: none;
+       color: #fff;
+       font-size: 14px;
+     }
+     .content .title a:hover{
+       text-decoration: underline;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="nav">
+        <a href="#"><span class="red"></span></a>
+        <a href="#"><span class="green"></span></a>
+        <a href="#"><span class="black"></span></a>
+      </div>
+      <ul class="title">
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">娱乐</a></li>
+        <li><a href="#">体育</a></li>
+        <li><a href="#">电影</a></li>
+        <li><a href="#">音乐</a></li>
+        <li><a href="#">旅游</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
