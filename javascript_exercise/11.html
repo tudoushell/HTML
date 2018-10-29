@@ -8,7 +8,7 @@
         background-color: #FFDDDD;
       }
       .content{
-        width: 50%;
+        width: 600px;
         overflow: hidden;
         margin: 0 auto;
       }
@@ -24,14 +24,16 @@
      }
      .content .nav .green{
        display: inline-block;
-       width: 14px;
-       height: 14px;
-       background-color: #008000;
+       width: 8px;
+       height: 8px;
+       border: 3.5px solid green;
+       background-color: green;
      }
      .content .nav .black{
        display: inline-block;
-       width: 14px;
-       height: 14px;
+       width: 8px;
+       height: 8px;
+       border: 3.5px solid #000;
        background-color: #000;
      }
      .content .title{
@@ -43,11 +45,14 @@
      }
      .content .title li{
        float: left;
-       padding: 2px 30px;
+       padding: 3px 30px;
        background: #FF0000;
+       border: 1px #fff solid;
        margin-right: 2px;
      }
      .content .title a{
+       padding: 0;
+       margin: 0;
        text-decoration: none;
        color: #fff;
        font-size: 14px;
@@ -60,9 +65,9 @@
   <body>
     <div class="content">
       <div class="nav">
-        <a href="#"><span class="red"></span></a>
-        <a href="#"><span class="green"></span></a>
-        <a href="#"><span class="black"></span></a>
+        <a href="#"><span class="red" title="红色"></span></a>
+        <a href="#"><span class="green" title="绿色"></span></a>
+        <a href="#"><span class="black" title="黑色"></span></a>
       </div>
       <ul class="title">
         <li><a href="#">新闻</a></li>
@@ -73,5 +78,45 @@
         <li><a href="#">旅游</a></li>
       </ul>
     </div>
+    <script>
+      var nav = document.getElementsByClassName("nav");
+      var a = nav[0].getElementsByTagName("a");
+      var span = document.getElementsByTagName("span");
+      var li = document.getElementsByTagName("li");
+      for(let i = 0, length = a.length; i < length; i++){
+        a[i].index = i;
+        a[i].onclick = function(){
+             switch(this.index){
+               case 0 :
+                      for(let i = 0 ; i < li.length; i++){
+                        li[i].style.backgroundColor = "red";
+                      }
+                      document.body.style.backgroundColor = "#FFDDDD";
+                      span[0].style.backgroundColor = "white";
+                      span[1].style.backgroundColor = "green";
+                      span[2].style.backgroundColor = "black";
+                      break;
+               case 1:
+                      for(let i = 0 ; i < li.length; i++){
+                        li[i].style.backgroundColor = "green";
+                      }
+                      document.body.style.backgroundColor = "#A3C5A8";
+                      span[0].style.backgroundColor = "red";
+                      span[1].style.backgroundColor = "white";
+                      span[2].style.backgroundColor = "black";
+                      break;
+                case 2:
+                      for(let i = 0 ; i < li.length; i++){
+                        li[i].style.backgroundColor = "black";
+                      }
+                      document.body.style.backgroundColor = "#CCCCCC";
+                      span[0].style.backgroundColor = "red";
+                      span[1].style.backgroundColor = "green";
+                      span[2].style.backgroundColor = "white";
+                      break;
+             }
+        };
+      }      
+    </script>
   </body>
 </html>
