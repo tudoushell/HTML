@@ -25,12 +25,13 @@
         <div class="box1"></div>
     </div>
     <script>
+     //第一种写法
+     /*
       var btn = document.getElementsByTagName("button");
       var box1 = document.querySelectorAll(".box1");
       var width = box1[0].clientWidth;
       var height = box1[0].clientHeight;
       var css = box1[0].style.cssText;
-      console.log(css);
       btn[0].onclick = function(){
         box1[0].style.width = width + 100 + "px";
         btn[0].onclick = 0;
@@ -49,7 +50,26 @@
         box1[0].style.cssText = "";
         box1[0].style.visibility = "visible";
       }
-     
+      */
+
+      //第二种写法
+      var btn = document.getElementsByTagName("button");
+      var box1 = document.querySelectorAll(".box1");
+      var style = ['width','height','backgroundColor','display','display'];
+      var val = ['200px','200px','red','none','block'];
+      for(let i = 0,length = btn.length; i < length; i++){
+            btn[i].index = i;
+            btn[i].onclick = function(){
+                 if(this.index === length -1){
+                   box1[0].style.cssText = "";
+                 }
+                 changeStyle(style[this.index],val[this.index]);    
+            }
+      }
+      //更改元素的样式
+      function changeStyle(styles,value){
+          box1[0].style[styles] = value;
+      }
     </script>
   </body>
 </html>
