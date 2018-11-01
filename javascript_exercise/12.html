@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>函数接收参数并弹出</title>
+    <style>
+      .content{
+        text-align: center;
+      }
+      input{
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+      window.onload = function(){
+        var btn = document.getElementById("btn");
+        var input = document.getElementsByTagName("input");
+        btn.onclick = function(){
+          for(let i = 0,length = input.length; i < length; i++){
+            alert(input[i].value);
+          }
+        };
+      };
+    
+    </script>
+  </head>
+  <body>
+    <div class="content">
+      <input type="text" id="input1" value="江苏"><br>
+      <input type="text" id="input2" value="南京"><br>
+      <button id="btn">传参</button>  
+    </div>
+  </body>
+</html>
