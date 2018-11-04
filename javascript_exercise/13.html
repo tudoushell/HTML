@@ -31,7 +31,6 @@
       
     }
     #content1{
-      display: block;
       width: 400px;
       height: 200px;
       padding: 20px;
@@ -52,32 +51,54 @@
       background-color: skyblue;
     }
     </style>
+    <!--原生JS-->
+    <!--
     <script>
       window.onload = function(){
         var ul = document.getElementById("list");
         var li = ul.getElementsByTagName("li");
-        var content1 = document.getElementById("content1");
-        var content2 = document.getElementById("content2");
-        var content3 = document.getElementById("content3");
-        var content = [content1,content2,content3];
+        var content = document.getElementById("content");
+        var contents = content.getElementsByTagName("div");
+        var current = 0;
         for(let i = 0,length = li.length; i < length ; i++){
           li[i].index = i;
           li[i].onclick = function(){
-            changedisplay(this.index);
+            contents[current].style.display = 'none';
+            contents[this.index].style.display = 'block';
+            current = this.index;   
           }
-        }
-        function changedisplay(index){
-          for(let i = 0,length = content.length ; i < length; i++){
-            if(i === index){
-              content[i].style.display = "block";
-            }else{
-              content[i].style.display = "none";
-            }
-          }
-        }
+        }         
       };
-    
     </script>
+    -->
+    <!--jQuery-->
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        /*
+          $(function(){
+            //获取content
+            var $content = $("#content>div");
+            //获取li并添加事件
+            $('#list>li').click(function(){
+              $("#content>div").css('display','none');
+              var index = $(this).index();
+              //$content[index].style.display = "block"
+              //$($content[index]).css('display','block');
+            });
+          });
+          */
+          //第二种方式
+          $(function(){
+            var current = 0;
+            var $content = $('#content>div');
+            $('#list>li').click(function(){
+              var index = $(this).index();
+              $content[current].style.display = 'none';
+              $content[index].style.display = 'block';
+              current = index;
+            });
+          });
+      </script>
   </head>
   <body>
     <h2>多Tab点击切换</h2>
