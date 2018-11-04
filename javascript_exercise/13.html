@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>多TAB点击切换</title>
+    <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #list{
+      list-style: none;
+      text-align: center;
+    }
+    #list li{
+      float: left;
+      padding: 10px;
+      cursor: pointer;
+    }
+    #ten{
+      background-color: yellow;
+    }
+    #thirty{
+      background-color: red;
+    }
+    #fifty{
+      background-color: skyblue;
+    }
+    #content{
+      clear: both;
+      
+    }
+    #content1{
+      display: block;
+      width: 400px;
+      height: 200px;
+      padding: 20px;
+      background-color: yellow;
+    }
+    #content2{
+      display: none;
+      width: 400px;
+      height: 200px;
+      padding: 20px;
+      background-color: red;
+    }
+    #content3{
+      display: none;
+      width: 400px;
+      height: 200px;
+      padding: 20px;
+      background-color: skyblue;
+    }
+    </style>
+    <script>
+      window.onload = function(){
+        var ul = document.getElementById("list");
+        var li = ul.getElementsByTagName("li");
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+        var content = [content1,content2,content3];
+        for(let i = 0,length = li.length; i < length ; i++){
+          li[i].index = i;
+          li[i].onclick = function(){
+            changedisplay(this.index);
+          }
+        }
+        function changedisplay(index){
+          for(let i = 0,length = content.length ; i < length; i++){
+            if(i === index){
+              content[i].style.display = "block";
+            }else{
+              content[i].style.display = "none";
+            }
+          }
+        }
+      };
+    
+    </script>
+  </head>
+  <body>
+    <h2>多Tab点击切换</h2>
+    <ul id="list">
+      <li id="ten">10元套餐</li>
+      <li id="thirty">30元套餐</li>
+      <li id="fifty">50元套餐</li>
+    </ul>
+    <div id="content">
+      <div id="content1">
+        10元包月详情：<br>
+        每月限量随心打
+      </div>
+      <div id="content2" >
+          30元包月详情：<br>
+          每月限量随心打
+      </div>
+      <div id="content3">
+          50元包月详情：<br>
+          每月限量随心打
+      </div>
+    </div>
+  </body>
+
+</html>
