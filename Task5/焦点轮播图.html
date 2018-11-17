@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>轮播图</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .container{
+        position: relative;
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        margin: 20px auto;
+      }
+      .pic{
+        position: absolute;
+        left: -500px;
+        list-style: none;
+      }
+      .pic li {
+        float: left;
+      }
+      .pic img {
+        width: 500px;
+        height: 300px;
+      }
+      .fourline {
+        position: absolute;
+        bottom: 10px;
+        left: 219px;
+      }
+      .fourline a{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: gray;
+        border-radius: 50%;
+        border: 1px solid #000;
+      }
+
+      .fourline a:nth-of-type(1){
+        background-color: #fab905;
+      }
+      
+      .fourline a:hover{
+        background-color: #fab905;
+      }
+      .leftpic{
+        float: left;
+        cursor: pointer;
+        width: 100px;
+        height: 300px;
+      }
+      .leftpic span{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        display: block;
+        width: 17px;
+        height: 28px;
+        background: url("img/button_left.png") no-repeat;
+      }
+      .rightpic{
+        float: right;
+        cursor: pointer;
+        width: 100px;
+        height: 300px;
+      }
+
+      .rightpic span{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        display: block;
+        width: 17px;
+        height: 28px;
+        background: url("img/button_right.png") no-repeat;
+      }
+      .clearfix::before,.clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+    <!-- 原生js -->
+    <script src="js/app.js"></script>
+
+    
+  </head>
+  <body>
+      <div class="container clearfix">
+        <ul class="pic">
+          <li><img src="img/4.jpg" alt="4"></li>
+          <li><img src="img/1.jpg" alt="1"></li>
+          <li><img src="img/2.jpg" alt="2"></li>
+          <li><img src="img/3.jpg" alt="3"></li>
+          <li><img src="img/4.jpg" alt="4"></li>
+          <li><img src="img/1.jpg" alt="1"></li>
+        </ul>
+        <!-- 圆圈按钮 -->
+        <div class="fourline">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <div class="leftpic">
+          <span></span>
+        </div>
+        <div class="rightpic">
+          <span></span>
+        </div>
+        
+      </div>
+    
+  </body>
+</html>
