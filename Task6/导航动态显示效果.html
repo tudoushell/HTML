@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>导航动态显示效果</title>
+    <meta charset="UTF-8">
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .container{
+        width: 800px;
+        height: 35px;
+        background: #3B5998;
+        margin: 10px auto;
+      }
+      .container .title{
+        list-style: none;
+        margin-left: 10px;
+      }
+      .container .title li{
+        position: relative;
+        text-align: center;
+        float: left;
+        height: 20px;
+        background: #EEEEEE;
+        margin-right: 20px;
+        margin-top: 8px;        
+      }
+      .container .title>li:hover{
+        background: #3B5998;
+      }
+      .container .title li>a{
+        text-decoration: none;
+        display: block;
+        color: #3B5998;
+        padding: 0 8px;
+        font-size: 12px;
+      }
+      .container .title li>a:hover{
+        color: white;
+        text-decoration: underline;
+      }
+
+      /* .title .shirt,.title .weifang,.title .jeans{
+        display: none;
+      } */
+      .title .shirt,.title .weifang,.title .jeans{
+        position: absolute;
+        list-style: none;
+        width: 80px;
+      }
+      .title .shirt li,.title .weifang li,.title .jeans li{
+        /* position: absolute; */
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px gray solid;
+      }
+      .title .shirt>li:hover{
+        color: white;
+        background: greenyellow;
+        text-decoration: underline;
+      }
+
+
+      .clearfix::after,.clear::before{
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+      $(function(){
+
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="title clearfix">
+        <li><a href="#">首页</a></li>
+        <li>
+          <a href="#">衬衫</a>
+          <ul class="shirt">
+              <li><a href="#">短袖衬衫</a></li>
+              <li><a href="#">长袖衬衫</a></li>
+              <li><a href="#">无袖衬衫</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">卫衣</a>
+          <ul class="weifang">
+              <li><a href="#">开襟卫衣</a></li>
+              <li><a href="#">套头卫衣</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="#">裤子</a>
+          <ul class="jeans">
+              <li><a href="#">休闲裤</a></li>
+              <li><a href="#">牛仔裤</a></li>
+              <li><a href="#">短裤</a></li>
+            </ul>
+        </li>   
+        <li><a href="#">联系我们</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
