@@ -27,24 +27,22 @@
         margin-right: 20px;
         margin-top: 8px;        
       }
-      .container .title>li:hover{
-        background: #3B5998;
-      }
       .container .title li>a{
         text-decoration: none;
         display: block;
         color: #3B5998;
-        padding: 0 8px;
+        padding: 2px 8px;
         font-size: 12px;
       }
       .container .title li>a:hover{
+        background: #3B5998;
         color: white;
         text-decoration: underline;
       }
 
-      /* .title .shirt,.title .weifang,.title .jeans{
+      .title .shirt,.title .weifang,.title .jeans{
         display: none;
-      } */
+      }
       .title .shirt,.title .weifang,.title .jeans{
         position: absolute;
         list-style: none;
@@ -56,7 +54,7 @@
         margin: 0;
         border-bottom: 1px gray solid;
       }
-      .title .shirt>li:hover{
+      .title .shirt li a:hover,.title .weifang li a:hover,.title .jeans li a:hover{
         color: white;
         background: greenyellow;
         text-decoration: underline;
@@ -72,7 +70,14 @@
     <script src="js/jquery-1.12.4.js"></script>
     <script>
       $(function(){
+        $('.container>.title>li:has(ul)').hover(function(){
+          //动画展开
+          $(this).children('ul').stop().slideDown();
+        },function(){
+          //动画收缩
+          $(this).children('ul').stop().slideUp();
 
+        });
       });
     </script>
   </head>
