@@ -41,9 +41,6 @@
         border: 1px solid #000;
       }
 
-      .fourline a:nth-of-type(1){
-        background-color: #fab905;
-      }
       
       .fourline a:hover{
         background-color: #fab905;
@@ -79,6 +76,11 @@
         height: 28px;
         background: url("img/button_right.png") no-repeat;
       }
+	  
+	  .on{
+        background-color: #fab905 !important;
+      }
+	  
       .clearfix::before,.clearfix::after{
         content: "";
         display: table;
@@ -86,7 +88,12 @@
       }
     </style>
     <!-- 原生js -->
+	<!--
     <script src="js/app.js"></script>
+	-->
+	<!-- jQuery -->
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/slideshow.js"></script>
 
     
   </head>
@@ -102,7 +109,7 @@
         </ul>
         <!-- 圆圈按钮 -->
         <div class="fourline">
-            <a href="#"></a>
+            <a href="#" class="on"></a>
             <a href="#"></a>
             <a href="#"></a>
             <a href="#"></a>
