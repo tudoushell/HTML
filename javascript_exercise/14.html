@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>用循环将三个div变成红色</title>
+  <style>
+    #wrap{
+      text-align: center;
+      width: 330px;
+      margin: 0 auto;
+    }
+    #btn{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #wrap .red{
+      margin: 0 5px;
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      float: left;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      var btn1 = document.getElementById('btn1');
+      var red = document.querySelectorAll('.red');
+      btn1.onclick =function(){
+        for(let i = 0,length = red.length; i < length; i++){
+          red[i].style.backgroundColor = "red";
+        }
+      }
+    };
+  </script>
+</head>
+<body>
+  
+  <div id="btn"><button id="btn1">点击将DIV变成红色</button></div>  
+  <div id="wrap">
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red"></div>
+  </div>
+</body>
+</html>
