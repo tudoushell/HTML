@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>鼠标移入移出改变样式</title>
+  <style>
+    #box1{
+      width: 160px;
+      height: 160px;
+      background-color: black;
+      color: white;
+      font-size: 14px;
+      border: 10px solid black;
+      margin: 0 auto;
+      cursor: crosshair;
+      padding: 10px;
+    }
+    #box1.hover{
+      border: 10px solid red;
+      background-color: #F0F0F0;
+      color: red;
+    }
+  </style>
+  <script>
+  window.onload = function(){
+    var box1 = document.getElementById('box1');
+    box1.onmouseover = function(){
+      this.className = "hover";
+    }
+    box1.onmouseout = function(){
+      this.className = "";
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="box1">鼠标移入改变样式，鼠标移出恢复</div>
+</body>
+</html>
