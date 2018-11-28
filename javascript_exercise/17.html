@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>百度输入法</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #wrap{
+      width: 60px;
+      margin: 0 auto;
+    }
+    #wrap>button{
+      margin: 10px 0 5px 0;
+    }
+    #way{
+      display: none;
+      width: 68px;
+      list-style: none;
+      border: 1px solid #9A99FF;
+      box-sizing: border-box;
+    }
+    #way>li{
+      padding-bottom: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      color: blue;
+      padding: 5px 0 5px 5px;
+    }
+    #way>li:nth-of-type(2){
+      border-bottom: 1px solid #9A99FF;
+    }
+    #way>li:hover{
+      background-color: #9A99FF;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      var btn = document.getElementById("btn");
+      var way = document.getElementById("way");
+      var li = way.getElementsByTagName("li");
+      var flag = true;
+      btn.onclick = function(){
+        flags(way);
+      };
+      li[2].onclick = function(){
+        flags(way);
+      };
+      //用于关闭ul
+      function flags(obj){
+        if(flag){
+          obj.style.display = "block";
+        }else{
+          obj.style.display = "";
+        }
+        flag = !flag;
+      }
+    };
+  </script>
+</head>
+<body>
+  <div id="wrap">
+      <button id="btn">输入法</button><br>
+      <ul id="way">
+        <li>手写</li>
+        <li>拼音</li>
+        <li>关闭</li>
+      </ul>
+  </div>
+</body>
+</html>
