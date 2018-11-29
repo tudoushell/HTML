@@ -31,8 +31,20 @@ https://tudoushell.github.io/Task1/newspaper.html
 Task2
 https://tudoushell.github.io/Task2/index.html
 
+Task3
+https://tudoushell.github.io/Task3/10.html
+
+Task4
+https://tudoushell.github.io/Task4/11.html
+
 Task5
 https://tudoushell.github.io/Task5/slideshow.html
+
+Task6
+https://tudoushell.github.io/Task6/导航动态显示效果.html
+
+Task7
+https://tudoushell.github.io/Task7/jd_detail.html
 
 JavaScript exercise
 
