@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>求出数组中所有数字的和</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #wrap{
+        width: 600px;
+        margin: 15px auto;
+      }
+      #wrap>span{
+        color: gray;
+        font-size: 13px;
+        
+      }
+      #input1{
+        width: 220px;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+      .red{
+        color: red;
+        font-size: 22px;
+        margin-top: 10px;
+      }
+    </style>
+    <script>
+      window.onload = function(){
+        var wrap = document.getElementById("wrap");
+        var input = document.getElementById("input1");
+        var btn = document.getElementById("btn01");
+        var p = document.createElement("p");
+        btn.onclick = function(){
+          var sum = 0;
+          var newValue = input.value.split(",");
+          for(let i = 0; i < newValue.length; i++){
+            sum += parseInt(newValue[i]);
+          }
+          p.innerHTML = sum;
+          p.className = "red";
+          wrap.appendChild(p);
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <input id="input1" type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15">
+      <span>输入数字求和，数字之间用半角“,”号分隔</span><br>
+      <button id="btn01">求和</button>
+    </div>
+    
+  </body>
+</html>
