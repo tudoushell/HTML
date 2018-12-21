@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>图片列表：鼠标移入/移出改变图片透明度</title>
+  <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #wrap{
+        width: 715px;
+        height: 300px;
+        border: 1px solid;
+        margin: 10px auto;
+      }
+      .pics{
+        list-style: none;
+        margin: 8px 0 0 2px;
+      }
+      .pics > li {
+        float: left;
+        width: 130px;
+        height: 130px;
+        margin: 5px;
+        border: 1px solid #CCCCCC;
+        cursor: crosshair;
+      }
+      .pics > li > img{
+        opacity: 0.3;
+      }
+
+      .clearfix::after,.clearfix::before{
+          content: "";
+          display: table;
+          clear: both;
+      }
+  </style>
+  <script>
+      window.onload =  function(){
+        var img = document.getElementsByTagName("img");
+        for(let i = 0; i < img.length; i++){
+            img[i].onmousemove = function(){
+              img[i].style.opacity = 1;
+            }
+            img[i].onmouseleave = function(){
+              img[i].style.opacity = 0.3;
+            }
+        }
+      };
+  </script>
+</head>
+<body>
+    <div id="wrap">
+      <ul class="pics clearfix">
+        <li><img src="img/5.jpg" alt="5"></li>
+        <li><img src="img/6.jpg" alt="6"></li>
+        <li><img src="img/7.jpg" alt="7"></li>
+        <li><img src="img/8.jpg" alt="8"></li>
+        <li><img src="img/9.jpg" alt="9"></li>
+        <li><img src="img/10.jpg" alt="10"></li>
+        <li><img src="img/11.jpg" alt="11"></li>
+        <li><img src="img/12.jpg" alt="12"></li>
+        <li><img src="img/13.jpg" alt="13"></li>
+        <li><img src="img/14.jpg" alt="14"></li>
+      </ul>
+    </div>
+</body>
+</html>
