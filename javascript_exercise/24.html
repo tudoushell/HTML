@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>简易JS日历</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+
+    	#wrap{
+    		width: 298px;
+    		background: #EAEAEA;
+    		margin: 10px auto;
+    		padding: 5px;
+    		overflow: hidden;
+    	}
+    	#date{
+    		overflow: hidden;
+    		list-style: none;
+    		text-align: center;
+    		width: 302px;
+    		margin: 0 auto;
+    	}
+    	#date > li{
+    		float: left;
+    		width: 52px;
+    		height: 52px;
+    		margin: 5px;
+    		padding: 5px;
+    		background: black;
+    		cursor: pointer;
+    		border: 1px solid;
+    	}
+    	
+    	.frame{
+    		background: white !important;
+    	}
+    	
+    	.change{
+    		color: pink;
+    	}
+    	
+    	
+    	p{
+        font-family: Tahoma;
+    		color: white;
+    		font-size: 16px;
+        font-weight: bold;
+    		line-height: 23px;
+    	}
+    	
+    	#info{
+    		width: 265px;
+    		height: 60px;
+    		border: 1px solid white;
+    		margin: 0 auto;
+    		padding: 5px 10px;
+    		
+    	}
+    	
+    	#info > h2{
+        font-family: Tahoma;
+    		font-size: 14px;
+    	}
+    	
+    	#info > p{
+      font-family: Tahoma;
+    	font-size: 14px;
+    	color: black;
+    	}
+    
+    	
+    </style>
+	<!-- jQuery -->
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+			var arr = [
+					"元旦：1月1日至3日放假三天。",
+					"春节：2月2日至8日放假7天。",
+					"妇女节：3月8日妇女节，与我无关。",
+					"清明节：4月3日至5日放假3天。",
+					"劳动节：4月30日至5月2日放假3天。",
+					"端午节：6月4日至6日放假3天",
+					"小暑：7月7日小暑。不放假。",
+					"七夕节：8月6日七夕节。不放假。",
+					"中秋节：9月10日至12日放假3天。",
+					"国庆节：10月1日至7日放假7天。",
+					"立冬：11月8日立冬。不放假。",
+					"艾滋病日：12月1日<br/>废除奴隶国际日：12月2日。"
+					];
+			var $li = $("#date>li");
+			var $p = $("#date>li>p");
+			var $strong = $("#info strong");
+			var $info_p = $("#info>p");
+			var k = 0;
+			$li.each(function(){
+				$(this).mousemove(function(){
+					var index = $(this).index();
+					$($li[k]).attr("class","");		
+					$($p[k]).attr("class","");
+					$(this).attr("class","frame");
+					$($p[index]).attr("class","change");
+					k = index;
+					$strong.text(index + 1);
+					$info_p.html(arr[index]);
+				});
+			});
+		});
+	
+	
+	</script> 
+	<!--  原生JS -->
+	<!-- 
+	<script>
+			window.onload = function(){
+				var arr = [
+					"元旦：1月1日至3日放假三天。",
+					"春节：2月2日至8日放假7天。",
+					"妇女节：3月8日妇女节，与我无关。",
+					"清明节：4月3日至5日放假3天。",
+					"劳动节：4月30日至5月2日放假3天。",
+					"端午节：6月4日至6日放假3天",
+					"小暑：7月7日小暑。不放假。",
+					"七夕节：8月6日七夕节。不放假。",
+					"中秋节：9月10日至12日放假3天。",
+					"国庆节：10月1日至7日放假7天。",
+					"立冬：11月8日立冬。不放假。",
+					"艾滋病日：12月1日<br/>废除奴隶国际日：12月2日。"
+					];
+				var ul = document.getElementById("date");
+				var li = ul.getElementsByTagName("li");
+				var p = ul.getElementsByTagName("p");
+				var info = document.getElementById("info");
+				var strong = info.getElementsByTagName("strong");
+				var info_p = info.getElementsByTagName("p");
+				var k = 0;
+				for(var i = 0 ; i < li.length; i++){
+					li[i].index = i;
+					li[i].onmousemove = function(){
+						p[k].className = "";
+						li[k].className = "";
+						p[this.index].className = "change";
+						this.className = "frame";
+						k = this.index;
+						strong[0].innerHTML = this.index + 1;
+						info_p[0].innerHTML = arr[this.index];
+						
+					};
+				}
+				
+			};
+	</script>
+	 -->
+  </head>
+  
+  <body>
+		    	<div id="wrap">
+		    			<ul id="date">
+		    				<li class="frame">
+		    					<p class="change">1<br/>JAN</p>
+		    				</li>
+		    				<li>
+		    					<p>2<br/>FER</p>
+		    				</li>
+		    				<li>
+		    					<p>3<br/>MAR</p>
+		    				</li>
+		    				<li>
+		    					<p>4<br/>APR</p>
+		    				</li>
+		    				<li>
+		    					<p>5<br/>MAY</p>
+		    				</li>
+		    				<li>
+		    					<p>6<br/>JUN</p>
+		    				</li>
+		    				<li>
+		    					<p>7<br/>JUL</p>
+		    				</li>
+		    				<li>
+		    					<p>8<br/>AUG</p>
+		    				</li>
+		    				<li>
+		    					<p>9<br/>SEP</p>
+		    				</li>
+		    				<li>
+		    					<p>10<br/>OCT</p>
+		    				</li>
+		    				<li>
+		    					<p>11<br/>NOV</p>
+		    				</li>
+		    				<li>
+		    					<p>12<br/>DEC</p>
+		    				</li>		    			
+		    			</ul>
+		    			<div id="info">
+		    				<h2>
+		    					<strong>1 </strong>月节日
+		    				</h2>
+		    				<p>元旦：1月1日至3日放假3天。</p>
+		    			</div>
+		    	</div>
+  </body>
+</html>
+
